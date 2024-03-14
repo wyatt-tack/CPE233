@@ -1,0 +1,435 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: Cal Poly SLO
+// Engineer: Wyatt Tack
+// 
+// Create Date: 03/12/2024 03:28:59 PM
+// Design Name: I2C Reading Module
+// Module Name: I2C
+// Project Name: OTTER_MCU_GYRO
+// Target Devices: Basys 3 Board, Developed for MPU6050 accelerometer
+// Tool Versions: 1.0 Test
+// Description: Uses state machine to continoutsly read 2 bytes from I2C module at
+//              regAddrR and regAddrR+1, and write 1 byte to regAddrW
+//              can be manipultated for other I2C commands later
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module I2C(
+input clk,
+input [7:0] I2CAddr, regAddrRead, regAddrWrite,
+output logic [15:0] dataRead, 
+input [7:0] dataWrite,
+output logic SDA, SCL
+    );
+//global temp storage    
+logic shiftOutFlag=1'b0;
+logic shiftInFlag=1'b0;
+logic stateFlag=1'b0;
+logic [7:0] SDAout;
+logic [7:0] SDAin;
+
+//-----counter for 5kHz signals for timing ---------------slwClk--------
+logic slwClk = 1'b1;
+logic [2:0] slwClkCntr  = 3'b000; 
+always_ff@(posedge clk)
+begin
+if(slwClkCntr == 3'b100) 
+    begin
+    slwClkCntr <= 3'b0000;
+    slwClk <= ~slwClk;
+    end 
+else
+    slwClkCntr <= slwClkCntr + 1'b1;
+end 
+//-----------------------------------------------------------------------
+//--------------SCL CLK ----------------------------------------SCL------
+logic SCLholdLow = 1'b0;
+logic SCLcnt=1'b0;
+always_ff@(posedge slwClk)
+begin
+if(SCLholdLow == 1'b0) 
+    begin
+    SCLcnt <= ~SCLcnt;
+    end 
+else
+    begin
+    SCLholdLow  <= 1'b0;
+    SCLcnt <= 0;
+    end
+end 
+assign SCL = SCLcnt;
+//-----------------------------------------------------------------------
+//--------------Shift out register ------------------------shiftOutFlag--
+logic [2:0] shiftOutCntr=3'b000;//           SDAout -> SDA//stateFlag = 1
+always_ff@(posedge slwClk && SCL == 1'b0)begin
+if (shiftOutFlag==1'b1 && shiftInFlag==1'b0) begin
+case (shiftOutCntr)
+    0: 
+        begin
+        SDA <= SDAout[7];
+        shiftOutCntr <= shiftOutCntr+1;
+        end
+    1: 
+        begin
+        SDA <= SDAout[6];
+        shiftOutCntr <= shiftOutCntr+1;
+        end
+    2: 
+        begin
+        SDA <= SDAout[5];
+        shiftOutCntr <= shiftOutCntr+1;
+        end
+    3: 
+        begin
+        SDA <= SDAout[4];
+        shiftOutCntr <= shiftOutCntr+1;
+        end
+    4: 
+        begin
+        SDA <= SDAout[3];
+        shiftOutCntr <= shiftOutCntr+1;
+        end
+    5: 
+        begin
+        SDA <= SDAout[2];
+        shiftOutCntr <= shiftOutCntr+1;
+        end
+    6: 
+        begin
+        SDA <= SDAout[1];
+        shiftOutCntr <= shiftOutCntr+1;
+        end
+    7: 
+        begin
+        SDA <= SDAout[0];
+        shiftOutCntr <= 3'b000;
+        shiftOutFlag <= 1'b0;
+        stateFlag <= 1;
+        end
+    default: shiftOutCntr <= 3'b000;
+endcase
+end
+end
+//-----------------------------------------------------------------------
+//--------------Shift in register ------------------------shiftInFlag----
+logic [2:0] shiftInCntr=3'b000;//             SDA -> SDAin//stateFlag = 1
+always_ff@(negedge slwClk && SCL == 1'b0)begin
+if (shiftInFlag==1'b1 && shiftOutFlag==1'b0) begin
+SDA <= 1'bz;
+case (shiftOutCntr)
+    0: 
+        begin
+        SDAin[7] <= SDA;
+        shiftInCntr <= shiftInCntr+1;
+        end
+    1: 
+        begin
+        SDAin[6] <= SDA;
+        shiftInCntr <= shiftInCntr+1;
+        end
+    2: 
+        begin
+        SDAin[5] <= SDA;
+        shiftInCntr <= shiftInCntr+1;
+        end
+    3: 
+        begin
+        SDAin[4] <= SDA;
+        shiftInCntr <= shiftInCntr+1;
+        end
+    4: 
+        begin
+        SDAin[3] <= SDA;
+        shiftInCntr <= shiftInCntr+1;
+        end
+    5: 
+        begin
+        SDAin[2] <= SDA;
+        shiftInCntr <= shiftInCntr+1;
+        end
+    6: 
+        begin
+        SDAin[1] <= SDA;
+        shiftInCntr <= shiftInCntr+1;
+        end
+    7: 
+        begin
+        SDAin[0] <= SDA;
+        shiftInCntr <= 3'b000;
+        shiftInFlag <= 1'b0;
+        stateFlag <= 1;
+        end
+    default: shiftOutCntr <= 3'b000;
+endcase
+end
+end
+//-----------------------------------------------------------------------
+
+
+
+//--------------State declarations and register--------------------------
+typedef enum {
+//Send 2 bytes to I2CAddr (regAddrWrite <- dataWrite)
+delayW, 
+startW, 
+sendAddrWW, //send I2CAddr to write
+ackAddrW,
+regAddrW,   //send regAddrWrite to write
+ackRegW,
+dataW,      //send dataWrite to write
+ackDataW,
+stopW, 
+//Send 1 byte to I2CAddr (regAddrRead) 
+//-> Read 2 bytes from I2CAddr (dataRead)
+delayR,
+startR,
+sendAddrRW, //send I2CAddr to write
+ackAddrR,
+regAddrR,   //send regAddrRead to write
+ackRegR,
+startReadData, 
+sendAddrRR, //send I2CAddr to write
+ackAddrRead,
+dataR1,     //send dataRead to read
+ackMaster,
+dataR2,     //send dataRead to read
+nack,
+stopR
+} states;
+//state register
+states NS, PS;
+always_ff@(negedge slwClk) begin 
+//only switch to next state when conditions are met
+if (stateFlag == 1'b1)
+    begin
+    stateFlag <= 1'b0;
+    PS<=NS;
+    end
+end 
+//-----------------------------------------------------------------------
+//-----------------Register Flags ---------------------------------------
+
+always_ff@(negedge slwClk) begin 
+
+case (PS) //         storeData[]   SDA   I2CAddr[]  regAddr[]  
+    delayW:
+        begin
+        SDA = 1;
+        stateFlag = 1;
+        end 
+    startW: 
+        begin
+        SDA = 0;
+        stateFlag = 1;
+        shiftOutFlag=1'b1;
+        end
+    sendAddrWW: //send I2CAddr to write
+        begin
+        //SCLholdLow = 1'b1;
+        
+        end
+    ackAddrW:
+        begin
+        
+        
+        end 
+    regAddrW:   //send regAddrWrite to write
+        begin
+        
+        end 
+    ackRegW:
+        begin
+        
+        end 
+    dataW:      //send dataWrite to write
+        begin
+        
+        end 
+    ackDataW:
+        begin
+        
+        end 
+    stopW:
+        begin
+        
+        end 
+//Send 1 byte to I2CAddr (regAddrRead) 
+//-> Read 2 bytes from I2CAddr (dataRead)
+    delayR:
+        begin
+        
+        end 
+    startR:
+        begin
+        
+        end 
+    sendAddrRW: //send I2CAddr to write
+        begin
+        
+        end 
+    ackAddrR:
+        begin
+        
+        end 
+    regAddrR:   //send regAddrRead to write
+        begin
+        
+        end 
+    ackRegR:
+        begin
+        
+        end 
+    startReadData: 
+        begin
+        
+        end 
+    sendAddrRR: //send I2CAddr to write
+        begin
+        
+        end 
+    ackAddrRead:
+        begin
+        
+        end 
+    dataR1:     //send dataRead to read
+        begin
+        
+        end 
+    ackMaster:
+        begin
+        
+        end 
+    dataR2:     //send dataRead to read
+        begin
+        
+        end 
+    nack:
+        begin
+        
+        end 
+    stopR:  
+        begin
+        
+        end 
+endcase
+end 
+
+
+
+//-----------------State Actions for I2C Bus-----------------------------
+always_comb begin
+//SDA = 1'bz;
+//stateFlag = 0;
+case (PS) //         storeData[]   SDA   I2CAddr[]  regAddr[]  
+    delayW:
+        begin
+        NS = startW;
+        end 
+    startW: 
+        begin
+        NS = sendAddrWW;
+        end
+    sendAddrWW: //send I2CAddr to write
+        begin
+        SDAout = {I2CAddr[6:0], 1'b0};
+        //state flag in shift register
+        NS = ackAddrW;
+        end
+    ackAddrW:
+        begin
+        
+        
+        end 
+    regAddrW:   //send regAddrWrite to write
+        begin
+        
+        end 
+    ackRegW:
+        begin
+        
+        end 
+    dataW:      //send dataWrite to write
+        begin
+        
+        end 
+    ackDataW:
+        begin
+        
+        end 
+    stopW:
+        begin
+        
+        end 
+//Send 1 byte to I2CAddr (regAddrRead) 
+//-> Read 2 bytes from I2CAddr (dataRead)
+    delayR:
+        begin
+        
+        end 
+    startR:
+        begin
+        
+        end 
+    sendAddrRW: //send I2CAddr to write
+        begin
+        
+        end 
+    ackAddrR:
+        begin
+        
+        end 
+    regAddrR:   //send regAddrRead to write
+        begin
+        
+        end 
+    ackRegR:
+        begin
+        
+        end 
+    startReadData: 
+        begin
+        
+        end 
+    sendAddrRR: //send I2CAddr to write
+        begin
+        
+        end 
+    ackAddrRead:
+        begin
+        
+        end 
+    dataR1:     //send dataRead to read
+        begin
+        
+        end 
+    ackMaster:
+        begin
+        
+        end 
+    dataR2:     //send dataRead to read
+        begin
+        
+        end 
+    nack:
+        begin
+        
+        end 
+    stopR:  
+        begin
+        
+        end 
+   
+   
+   
+   
+   
+    default:
+        begin
+        SDA = 1'b1;
+        NS = delayW;
+        end
+endcase    
+end    
+endmodule

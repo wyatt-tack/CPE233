@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date             : Wed Mar 13 02:40:53 2024
+| Date             : Thu Mar 14 02:41:09 2024
 | Host             : MSI running 64-bit major release  (build 9200)
 | Command          : report_power -file Gyro_Test_power_routed.rpt -pb Gyro_Test_power_summary_routed.pb -rpx Gyro_Test_power_routed.rpx
 | Design           : Gyro_Test
@@ -30,11 +30,11 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.060        |
+| Total On-Chip Power (W)  | 0.063        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.001        |
-| Device Static (W)        | 0.059        |
+| Device Static (W)        | 0.062        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 99.7         |
 | Junction Temperature (C) | 25.3         |
@@ -53,16 +53,16 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      154 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       29 |     20800 |            0.14 |
-|   CARRY4       |    <0.001 |       14 |      8150 |            0.17 |
-|   Register     |    <0.001 |       96 |     41600 |            0.23 |
-|   BUFG         |     0.000 |        1 |        32 |            3.13 |
+| Slice Logic    |    <0.001 |      221 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       53 |     20800 |            0.25 |
+|   Register     |    <0.001 |      140 |     41600 |            0.34 |
+|   CARRY4       |    <0.001 |       10 |      8150 |            0.12 |
+|   BUFG         |    <0.001 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |        7 |       --- |             --- |
-| Signals        |    <0.001 |      157 |       --- |             --- |
+| Signals        |    <0.001 |      210 |       --- |             --- |
 | I/O            |    <0.001 |       15 |       106 |           14.15 |
-| Static Power   |     0.059 |          |           |                 |
-| Total          |     0.060 |          |           |                 |
+| Static Power   |     0.062 |          |           |                 |
+| Total          |     0.063 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Vccint    |       0.950 |     0.007 |       0.001 |      0.006 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.011 |       0.000 |      0.011 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |

@@ -28,82 +28,114 @@ logic sclClk = 1'b0;
 logic slwClk = 1'b0;
 
 //-----counter for 10kHz signals and offset for SDA/SCL transmit---------
-logic [16:0] counter = 17'h00000;
+//logic [3:0] counterSCL = 4'b0000; 
+logic [8:0] counterSCL = 9'h000;
+logic [8:0] counterSDA = 9'h000;
 always_ff@(posedge clk)
 begin
 //offset for SDA and SCL clocks
-if(counter == 17'h186a0) 
+if(counterSCL == 9'h1f4) 
     begin
-    counter <= 17'h00000;
+    counterSCL <= 9'h000;
     sclClk <= ~sclClk;
+    counterSDA <= 9'h000;
+    //slwClk <= ~slwClk;
     end
-else if(counter == 17'h0c350) 
+else if(counterSDA == 9'h0fa) 
     begin
-    counter <= counter + 1'b1;
+    counterSCL <= counterSCL + 1'b1;
+    counterSDA <= counterSDA + 1'b1;
+    //counterSDA <= 14'h0000;
     slwClk <= ~slwClk;
     end    
-else counter <= counter + 1'b1;
+else
+    begin 
+    counterSCL <= counterSCL + 1'b1;
+    counterSDA <= counterSDA + 1'b1;
+    end
 end 
 //-----------------------------------------------------------------------
 //--------------State declarations and register--------------------------
 typedef enum {
 //init/hold state for catchup on ACCELR
-hold, 
+holdW1, holdW2,
 
 //states to select and write to address on bus
 startAddrSelW, 
-addrWW6, addrWW5, addrWW4, addrWW3, addrWW2, addrWW1, addrWW0,
-addrWW,
-ackAddrSelW,
+addrWW6, addrWW5, addrWW4, addrWW3, addrWW2, addrWW1, addrWW0, addrWW,
+ackAddrSelW1, ackAddrSelW2,
 //states to select register to write to on module
 regAddr7W, regAddr6W, regAddr5W, regAddr4W, regAddr3W, regAddr2W, regAddr1W, regAddr0W,
-ackRegSelW,
+ackRegSelW1, ackRegSelW2,
 //states to write data to reg
 dataW7, dataW6, dataW5, dataW4, dataW3, dataW2, dataW1, dataW0,
-ackW, stopW,
-
+ackW1, ackW2, stopW,
+holdR1, holdR2,
 //states to select and write to address on bus
 startAddrSelR, 
-addrRW6, addrRW5, addrRW4, addrRW3, addrRW2, addrRW1, addrRW0,
-addrRW,
-ackAddrSelR,
+addrRW6, addrRW5, addrRW4, addrRW3, addrRW2, addrRW1, addrRW0, addrRW,
+ackAddrSelR1, ackAddrSelR2,
 //states to select register to write to on module
 regAddr7R, regAddr6R, regAddr5R, regAddr4R, regAddr3R, regAddr2R, regAddr1R, regAddr0R,
-ackRegSelR,
+ackRegSelR1, ackRegSelR2, stopRegSelR, 
+holdDataRead1, holdDataRead2,
 //states to select device to read from on bus
 startDataRead,
-addrR6, addrR5, addrR4, addrR3, addrR2, addrR1, addrR0,
-addrR,
-ackDataSendR,
+addrR6, addrR5, addrR4, addrR3, addrR2, addrR1, addrR0, addrR,
+ackDataSendR1, ackDataSendR2,
 //states to read MSB
 dataRF, dataRE, dataRD, dataRC, dataRB, dataRA, dataR9, dataR8, 
-ackDataReadR,
+ackDataReadR1, ackDataReadR2,
 //states to read LSB
 dataR7, dataR6, dataR5, dataR4, dataR3, dataR2, dataR1, dataR0,
-nackR, stopR
+nackR1, nackR2, stopR
 } states;
 //state register
 states NS, PS;
 always_ff@(posedge slwClk) begin 
+
+//if(sclClk == 1'b1 && NS == startAddrSelW) PS<=NS;
+//else if(sclClk == 1'b1 && NS == startAddrSelR) PS<=NS;
+//else if (sclClk == 1'b1 && NS == startDataRead) PS<=NS;
+
+//else if (sclClk == 1'b1 && NS == holdR1) PS<=NS;
+
+//else if (sclClk == 1'b1 && NS == stopR) PS<=NS;
+
+
+//else if (sclClk == 1'b0) PS<=NS;
+
 PS<=NS;
+
 end 
 //-----------------------------------------------------------------------
 //-----------------State Actions for I2C Bus-----------------------------
-assign SCL = sclClk;
+logic SCLSleep;
+logic SCLWake;
+assign SCL = (sclClk & SCLSleep) | SCLWake;
 always_comb begin
 SDA = 1'bz;
+SCLSleep = 1'b1;
+SCLWake = 1'b0;
 case (PS) //         storeData[]   SDA   I2CAddr[]  regAddr[]  
     //init/hold state for catchup on ACCELR, send data to output reg
-    hold:
+    holdW1:
         begin
         dataR = storeData;
+        SCLWake = 1'b1;
         SDA = 1'b1;
-        NS = startAddrSelR;
+        NS = holdW2;
         end
-          
+    holdW2:
+        begin
+        SCLWake = 1'b1;
+        SDA = 1'b1;
+        NS = startAddrSelW;
+        end      
     //states to select and write to address on bus
     startAddrSelW:
         begin
+        if (slwClk == 1'b1)SCLWake = 1'b1; 
         SDA = 1'b0;
         NS = addrWW6;
         end
@@ -145,14 +177,19 @@ case (PS) //         storeData[]   SDA   I2CAddr[]  regAddr[]
     addrWW:
         begin
         SDA = 1'b0; 
-        NS = ackAddrSelW;
+        NS = ackAddrSelW1;
         end
-    ackAddrSelW:
+    ackAddrSelW1:
         begin
         SDA = 1'bz; 
-        NS = regAddr7W;
+        NS = ackAddrSelW2;
         end    
-        
+    ackAddrSelW2:
+        begin
+        SDA = 1'bz;
+        SCLSleep = 1'b0;
+        NS = regAddr7W;
+        end   
      //states to select register to write to on module
     regAddr7W: 
         begin
@@ -192,13 +229,19 @@ case (PS) //         storeData[]   SDA   I2CAddr[]  regAddr[]
     regAddr0W:
         begin
         SDA =  regAddrW[0];
-        NS = ackRegSelW;
+        NS = ackRegSelW1;
         end
-    ackRegSelW:
+    ackRegSelW1:
         begin
         SDA =  1'bz;
+        NS = ackRegSelW2;
+        end
+    ackRegSelW2:
+        begin
+        SDA =  1'bz;
+        SCLSleep = 1'b0;
         NS = dataW7;
-        end    
+        end      
     //states to write to reg
     dataW7: 
         begin
@@ -238,23 +281,42 @@ case (PS) //         storeData[]   SDA   I2CAddr[]  regAddr[]
     dataW0:
         begin
         SDA = dataW[0];
-        NS = ackW;
+        NS = ackW1;
         end
-    ackW:
+    ackW1:
         begin
         SDA = 1'bz;
-        NS = stopW;
+        NS = ackW2;
         end
+     ackW2:
+        begin
+        SDA = 1'bz;
+        SCLSleep = 1'b0;
+        NS = stopW;
+        end    
     stopW:
         begin
+        SDA = 1'b0;
+        if (slwClk == 1'b0)SCLWake = 1'b1; 
+        NS = holdR1;
+        end  
+    holdR1:
+        begin
         SDA = 1'b1;
+        SCLWake = 1'b1;
+        NS = holdR2;
+        end       
+    holdR2:
+        begin
+        SDA = 1'b1;
+        SCLWake = 1'b1;
         NS = startAddrSelR;
         end  
-           
     //states to select and write to address on bus
     startAddrSelR:
         begin
         SDA = 1'b0;
+        if (slwClk == 1'b1)SCLWake = 1'b1;
         NS = addrRW6;
         end
     addrRW6:
@@ -295,13 +357,19 @@ case (PS) //         storeData[]   SDA   I2CAddr[]  regAddr[]
     addrRW:
         begin
         SDA = 1'b0; 
-        NS = ackAddrSelR;
+        NS = ackAddrSelR1;
         end
-    ackAddrSelR:
+    ackAddrSelR1:
         begin
         SDA = 1'bz; 
-        NS = regAddr7R;
+        NS = ackAddrSelR2;
         end
+    ackAddrSelR2:
+        begin
+        SDA = 1'bz; 
+        SCLSleep = 1'b0;
+        NS = regAddr7R;
+        end        
     //states to select register to write to on module
     regAddr7R: 
         begin
@@ -341,16 +409,41 @@ case (PS) //         storeData[]   SDA   I2CAddr[]  regAddr[]
     regAddr0R:
         begin
         SDA =  regAddrR[0];
-        NS = ackRegSelR;
+        NS = ackRegSelR1;
         end
-    ackRegSelR:
+    ackRegSelR1:
         begin
         SDA =  1'bz;
-        NS = startDataRead;
+        NS = ackRegSelR2;
+        end
+    ackRegSelR2:
+        begin
+        SDA =  1'bz;
+        SCLSleep = 1'b0;
+        NS = stopRegSelR;
         end
     //states to select device to read from on bus    
+    stopRegSelR: 
+        begin
+        if (slwClk == 1'b0)SCLWake = 1'b1;
+        SDA =  1'b0;
+        NS = holdDataRead1;
+        end
+    holdDataRead1:
+        begin
+        SCLWake = 1'b1;
+        SDA =  1'b1;
+        NS = holdDataRead2;
+        end
+    holdDataRead2:
+        begin
+        SCLWake = 1'b1;
+        SDA =  1'b1;
+        NS = startDataRead;
+        end
     startDataRead:
         begin
+        if (slwClk == 1'b1)SCLWake = 1'b1;
         SDA =  1'b0;
         NS = addrR6;
         end
@@ -392,11 +485,17 @@ case (PS) //         storeData[]   SDA   I2CAddr[]  regAddr[]
     addrR:
         begin
         SDA = 1'b1;
-        NS = ackDataSendR;
+        NS = ackDataSendR1;
         end
-    ackDataSendR:
+    ackDataSendR1:
         begin
         SDA = 1'bz;
+        NS = ackDataSendR2;
+        end
+    ackDataSendR2:
+        begin
+        SDA = 1'bz;
+        SCLSleep = 1'b0;
         NS = dataRF;
         end
     //states to read MSB   
@@ -446,11 +545,17 @@ case (PS) //         storeData[]   SDA   I2CAddr[]  regAddr[]
         begin
         SDA = 1'bz;
         storeData[8] = SDA;
-        NS = ackDataReadR;
+        NS = ackDataReadR1;
         end 
-    ackDataReadR:
+    ackDataReadR1:
         begin
         SDA = 1'b0;
+        NS = ackDataReadR2;
+        end
+    ackDataReadR2:
+        begin
+        SDA = 1'b0;
+        SCLSleep = 1'b0;
         NS = dataR7;
         end
     //states to read LSB
@@ -500,23 +605,30 @@ case (PS) //         storeData[]   SDA   I2CAddr[]  regAddr[]
         begin
         SDA = 1'bz;
         storeData[0] = SDA;
-        NS = nackR;
+        NS = nackR1;
         end
-    nackR:
+    nackR1:
         begin
-        SDA = 1'b1;
+        SDA = 1'b0;
+        NS = nackR2;
+        end
+    nackR2:
+        begin
+        SDA = 1'b0;
+        SCLSleep = 1'b0;
         NS = stopR;
         end
     stopR:
         begin
         SDA = 1'b0;
-        NS = hold;
+        SCLWake = 1'b1;
+        NS = holdW1;
         end
     //default
     default:
         begin
         SDA = 1'b1;
-        NS = hold;
+        NS = holdW1;
         end
 endcase    
 end    

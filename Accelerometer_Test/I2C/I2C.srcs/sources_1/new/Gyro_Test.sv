@@ -26,7 +26,6 @@ module Gyro_Test(
    assign regAddrR = 8'h3B;
    assign regAddrW = 8'h6B;
    assign dataW = 8'h00;
-   
    // Declare I2C Gyro Reader ///////////////////////////////////////////////
    I2C Gyro_Reader ( .clk(CLK), .I2CAddr(I2CAddr), .regAddrR(regAddrR), 
                     .regAddrW(regAddrW), .dataR(dataR), .dataW(dataW),

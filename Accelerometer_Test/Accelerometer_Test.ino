@@ -29,7 +29,7 @@ void gyro_signals(void) {
 void setup() {
   Serial.begin(57600);
   
-  Wire.setClock(400000);
+  Wire.setClock(100000);
   Wire.begin();
 
 //  Wire.beginTransmission(0x68); 

@@ -129,8 +129,8 @@ set_property PACKAGE_PIN J1 [get_ports {SDA}]
 set_property PACKAGE_PIN L2 [get_ports {SCL}]					
 	set_property IOSTANDARD LVCMOS33 [get_ports {SCL}]
 ###Sch name = JA3
-##set_property PACKAGE_PIN J2 [get_ports {JA[2]}]					
-#	#set_property IOSTANDARD LVCMOS33 [get_ports {JA[2]}]
+#set_property PACKAGE_PIN J2 [get_ports {clk}]					
+#	set_property IOSTANDARD LVCMOS33 [get_ports {clk}]
 ###Sch name = JA4
 ##set_property PACKAGE_PIN G2 [get_ports {JA[3]}]					
 #	#set_property IOSTANDARD LVCMOS33 [get_ports {JA[3]}]
