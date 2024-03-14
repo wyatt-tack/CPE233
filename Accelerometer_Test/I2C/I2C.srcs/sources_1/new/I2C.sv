@@ -21,8 +21,23 @@ input clk,
 input [7:0] I2CAddr, regAddrR, regAddrW,
 output logic [15:0] dataR, 
 input [7:0] dataW,
-output logic SDA, SCL
+//output logic SCL, SDA
+output logic SCL, //SDA
+inout SDAin
     );
+     logic SDA; //SDA for writing
+     logic SDAR; //SDA for reading   
+     logic SDAinOut=1'b0;
+    assign SDAin  = !SDAinOut ? SDA : 1'bz;
+    
+    
+    always @ (posedge clk)
+    begin
+       SDAR <= SDAin; 
+    end   
+    
+    
+    
 logic [15:0] storeData;
 logic sclClk = 1'b0;
 logic slwClk = 1'b0;
@@ -58,8 +73,7 @@ end
 //--------------State declarations and register--------------------------
 typedef enum {
 //init/hold state for catchup on ACCELR
-holdW1, holdW2,
-
+holdW,
 //states to select and write to address on bus
 startAddrSelW, 
 addrWW6, addrWW5, addrWW4, addrWW3, addrWW2, addrWW1, addrWW0, addrWW,
@@ -92,7 +106,21 @@ nackR1, nackR2, stopR
 } states;
 //state register
 states NS, PS;
+logic [7:0] holdCount = 8'h00;
 always_ff@(posedge slwClk) begin 
+
+if(PS == holdW) 
+begin
+    if (holdCount == 8'h80)
+    begin
+    holdCount = 8'h00;
+    PS<=NS;
+    end
+    else
+    holdCount = holdCount + 1'b1;
+    
+end
+
 
 //if(sclClk == 1'b1 && NS == startAddrSelW) PS<=NS;
 //else if(sclClk == 1'b1 && NS == startAddrSelR) PS<=NS;
@@ -104,7 +132,7 @@ always_ff@(posedge slwClk) begin
 
 
 //else if (sclClk == 1'b0) PS<=NS;
-
+else
 PS<=NS;
 
 end 
@@ -114,24 +142,19 @@ logic SCLSleep;
 logic SCLWake;
 assign SCL = (sclClk & SCLSleep) | SCLWake;
 always_comb begin
-SDA = 1'bz;
+SDAinOut = 1'b0;
+//SDA = 1'bz;
 SCLSleep = 1'b1;
 SCLWake = 1'b0;
 case (PS) //         storeData[]   SDA   I2CAddr[]  regAddr[]  
     //init/hold state for catchup on ACCELR, send data to output reg
-    holdW1:
+    holdW:
         begin
         dataR = storeData;
         SCLWake = 1'b1;
         SDA = 1'b1;
-        NS = holdW2;
-        end
-    holdW2:
-        begin
-        SCLWake = 1'b1;
-        SDA = 1'b1;
         NS = startAddrSelW;
-        end      
+        end    
     //states to select and write to address on bus
     startAddrSelW:
         begin
@@ -181,12 +204,12 @@ case (PS) //         storeData[]   SDA   I2CAddr[]  regAddr[]
         end
     ackAddrSelW1:
         begin
-        SDA = 1'bz; 
+        SDA = 1'b0; 
         NS = ackAddrSelW2;
         end    
     ackAddrSelW2:
         begin
-        SDA = 1'bz;
+        SDA = 1'b0;
         SCLSleep = 1'b0;
         NS = regAddr7W;
         end   
@@ -233,12 +256,12 @@ case (PS) //         storeData[]   SDA   I2CAddr[]  regAddr[]
         end
     ackRegSelW1:
         begin
-        SDA =  1'bz;
+        SDA =  1'b0;
         NS = ackRegSelW2;
         end
     ackRegSelW2:
         begin
-        SDA =  1'bz;
+        SDA =  1'b0;
         SCLSleep = 1'b0;
         NS = dataW7;
         end      
@@ -285,12 +308,12 @@ case (PS) //         storeData[]   SDA   I2CAddr[]  regAddr[]
         end
     ackW1:
         begin
-        SDA = 1'bz;
+        SDA = 1'b0;
         NS = ackW2;
         end
      ackW2:
         begin
-        SDA = 1'bz;
+        SDA = 1'b0;
         SCLSleep = 1'b0;
         NS = stopW;
         end    
@@ -361,12 +384,12 @@ case (PS) //         storeData[]   SDA   I2CAddr[]  regAddr[]
         end
     ackAddrSelR1:
         begin
-        SDA = 1'bz; 
+        SDA = 1'b0; 
         NS = ackAddrSelR2;
         end
     ackAddrSelR2:
         begin
-        SDA = 1'bz; 
+        SDA = 1'b0; 
         SCLSleep = 1'b0;
         NS = regAddr7R;
         end        
@@ -413,12 +436,12 @@ case (PS) //         storeData[]   SDA   I2CAddr[]  regAddr[]
         end
     ackRegSelR1:
         begin
-        SDA =  1'bz;
+        SDA =  1'b0;
         NS = ackRegSelR2;
         end
     ackRegSelR2:
         begin
-        SDA =  1'bz;
+        SDA =  1'b0;
         SCLSleep = 1'b0;
         NS = stopRegSelR;
         end
@@ -489,62 +512,70 @@ case (PS) //         storeData[]   SDA   I2CAddr[]  regAddr[]
         end
     ackDataSendR1:
         begin
-        SDA = 1'bz;
+        SDA = 1'b0;
         NS = ackDataSendR2;
         end
     ackDataSendR2:
         begin
-        SDA = 1'bz;
+        SDA = 1'b0;
         SCLSleep = 1'b0;
         NS = dataRF;
         end
     //states to read MSB   
     dataRF: 
         begin
-        SDA = 1'bz;
-        storeData[15] = SDA;
+        //SDA = 1'b1;
+        SDAinOut = 1'b1;
+        storeData[15] = SDAR;
         NS = dataRE;
         end
     dataRE:
         begin
-        SDA = 1'bz;
-        storeData[14] = SDA;
+        //SDA = 1'b1;
+        SDAinOut = 1'b1;
+        storeData[14] = SDAR;
         NS = dataRD;
         end 
     dataRD:
         begin
-        SDA = 1'bz;
-        storeData[13] = SDA;
+        //SDA = 1'b1;
+        SDAinOut = 1'b1;
+        storeData[13] = SDAR;
         NS = dataRC;
         end  
     dataRC: 
         begin
-        SDA = 1'bz;
-        storeData[12] = SDA;
+        //SDA = 1'b1;
+        SDAinOut = 1'b1;
+        storeData[12] = SDAR;
         NS = dataRB;
         end 
     dataRB: 
         begin
-        SDA = 1'bz;
-        storeData[11] = SDA;
+        //SDA = 1'b1;
+        SDAinOut = 1'b1;
+        storeData[11] = SDAR;
         NS = dataRA;
         end 
     dataRA: 
         begin
-        SDA = 1'bz;
-        storeData[10] = SDA;
+        //SDA = 1'b1;
+        SDAinOut = 1'b1;
+        storeData[10] = SDAR;
         NS = dataR9;
         end 
     dataR9: 
         begin
-        SDA = 1'bz;
-        storeData[9] = SDA;
+        //SDA = 1'b1;
+        SDAinOut = 1'b1;
+        storeData[9] = SDAR;
         NS = dataR8;
         end 
     dataR8: 
         begin
-        SDA = 1'bz;
-        storeData[8] = SDA;
+        //SDA = 1'b1;
+        SDAinOut = 1'b1;
+        storeData[8] = SDAR;
         NS = ackDataReadR1;
         end 
     ackDataReadR1:
@@ -561,50 +592,58 @@ case (PS) //         storeData[]   SDA   I2CAddr[]  regAddr[]
     //states to read LSB
     dataR7: 
         begin
-        SDA = 1'bz;
-        storeData[7] = SDA;
+        //SDA = 1'b1;
+        SDAinOut = 1'b1;
+        storeData[7] = SDAR;
         NS = dataR6;
         end 
     dataR6: 
         begin
-        SDA = 1'bz;
-        storeData[6] = SDA;
+        //SDA = 1'b1;
+        SDAinOut = 1'b1;
+        storeData[6] = SDAR;
         NS = dataR5;
         end
     dataR5: 
         begin
-        SDA = 1'bz;
-        storeData[5] = SDA;
+        //SDA = 1'b1;
+        SDAinOut = 1'b1;
+        storeData[5] = SDAR;
         NS = dataR4;
         end
     dataR4: 
         begin
-        SDA = 1'bz;
-        storeData[4] = SDA;
+        //SDA = 1'b1;
+        SDAinOut = 1'b1;
+        storeData[4] = SDAR;
         NS = dataR3;
         end
     dataR3: 
         begin
-        SDA = 1'bz;
-        storeData[3] = SDA;
+        //SDA = 1'b1;
+        SDAinOut = 1'b1;
+        storeData[3] = SDAR;
         NS = dataR2;
         end
     dataR2: 
         begin
-        SDA = 1'bz;
-        storeData[2] = SDA;
+        //SDA = 1'b1;
+        SDAinOut = 1'b1;
+        storeData[2] = SDAR;
         NS = dataR1;
         end
     dataR1: 
         begin
-        SDA = 1'bz;
-        storeData[1] = SDA;
+        //SDA = 1'b1;
+        SDAinOut = 1'b1;
+        storeData[1] = SDAR;
         NS = dataR0;
         end
     dataR0:
         begin
-        SDA = 1'bz;
-        storeData[0] = SDA;
+        //SDA = 1'b1;
+        SDAinOut = 1'b1;
+        storeData[0] = SDAR;
         NS = nackR1;
         end
     nackR1:
@@ -622,13 +661,13 @@ case (PS) //         storeData[]   SDA   I2CAddr[]  regAddr[]
         begin
         SDA = 1'b0;
         SCLWake = 1'b1;
-        NS = holdW1;
+        NS = holdW;
         end
     //default
     default:
         begin
         SDA = 1'b1;
-        NS = holdW1;
+        NS = holdW;
         end
 endcase    
 end    

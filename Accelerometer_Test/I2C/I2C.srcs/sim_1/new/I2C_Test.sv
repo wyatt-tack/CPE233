@@ -26,7 +26,7 @@ logic [7:0] dataW;
     
     I2C Gyro_Reader ( .clk(CLK), .I2CAddr(I2CAddr), .regAddrR(regAddrR), 
                     .regAddrW(regAddrW), .dataR(dataR), .dataW(dataW),
-                    .SDA(SDA), .SCL(SCL));
+                    .SDAin(SDA), .SCL(SCL));
 initial CLK = 1'b0;                    
 always begin
 #5 CLK = ~CLK;

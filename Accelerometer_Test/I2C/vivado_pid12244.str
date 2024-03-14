@@ -1,0 +1,2137 @@
+/*
+
+Xilinx Vivado v2022.1 (64-bit) [Major: 2022, Minor: 1]
+SW Build: 3526262 on Mon Apr 18 15:48:16 MDT 2022
+IP Build: 3524634 on Mon Apr 18 20:55:01 MDT 2022
+
+Process ID (PID): 12244
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Thu Mar 14 13:00:19 PDT 2024
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 125
+Available screens: 1
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+Scale size: 19
+
+Java version: 	11.0.11 64-bit
+Java home: 	D:/Xilinx/Vivado/2022.1/tps/win64/jre11.0.11_9
+Java executable: 	D:/Xilinx/Vivado/2022.1/tps/win64/jre11.0.11_9/bin/java.exe
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.d3d=false, -Dsun.awt.nopixfmt=true, -Dsun.java2d.dpiaware=true, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Wyatt
+User home directory: C:/Users/Wyatt
+User working directory: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: D:/Xilinx/Vivado
+HDI_APPROOT: D:/Xilinx/Vivado/2022.1
+RDI_DATADIR: D:/Xilinx/Vivado/2022.1/data
+RDI_BINDIR: D:/Xilinx/Vivado/2022.1/bin
+
+Vivado preferences file: C:/Users/Wyatt/AppData/Roaming/Xilinx/Vivado/2022.1/vivado.xml
+Vivado preferences directory: C:/Users/Wyatt/AppData/Roaming/Xilinx/Vivado/2022.1/
+Vivado layouts directory: C:/Users/Wyatt/AppData/Roaming/Xilinx/Vivado/2022.1/data/layouts
+PlanAhead jar file: 	D:/Xilinx/Vivado/2022.1/lib/classes/planAhead.jar
+Vivado log file: 	C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/vivado.log
+Vivado journal file: 	C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/vivado.jou
+Engine tmp dir: 	C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/.Xil/Vivado-12244-MSI
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Xilinx/Vivado/2022.1/ids_lite/ISE
+XILINX_DSP: D:/Xilinx/Vivado/2022.1/ids_lite/ISE
+XILINX_HLS: D:/Xilinx/Vitis_HLS/2022.1
+XILINX_PLANAHEAD: D:/Xilinx/Vivado/2022.1
+XILINX_VIVADO: D:/Xilinx/Vivado/2022.1
+XILINX_VIVADO_HLS: D:/Xilinx/Vivado/2022.1
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,222 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\Users\Wyatt\Documents\Vivado\CPE233_Final\Accelerometer_Test\I2C\I2C.xpr. Version: Vivado v2022.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.xpr 
+// TclEventType: FLOW_ADDED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,222 MB. GUI used memory: 60 MB. Current time: 3/14/24, 1:00:20 PM PDT
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.xpr 
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 114 MB (+117014kb) [00:00:37]
+// [Engine Memory]: 1,222 MB (+1129581kb) [00:00:37]
+// WARNING: HEventQueue.dispatchEvent() is taking  3692 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2022.1/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 1218.391 ; gain = 0.000 
+// Project name: I2C; location: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C; part: xc7a35ticpg236-1L
+dismissDialog("Open Project"); // bA
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 121 MB (+1441kb) [00:02:38]
+// PAPropertyPanels.initPanels (Gyro_Test.sv) elapsed time: 0.2s
+// Elapsed time: 812 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Gyro_Test (Gyro_Test.sv)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Gyro_Test (Gyro_Test.sv)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Gyro_Test (Gyro_Test.sv)]", 1); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Gyro_Test (Gyro_Test.sv)]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Gyro_Test (Gyro_Test.sv), Gyro_Reader : I2C (I2C.sv)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Gyro_Test (Gyro_Test.sv), Gyro_Reader : I2C (I2C.sv)]", 2, false, false, false, false, false, true); // D - Double Click
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 4); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 4); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 5); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 6); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, I2C_Test (I2C_Test.sv)]", 7, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, I2C_Test (I2C_Test.sv)]", 7, true, false, false, false, false, true); // D - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C.sv", 2); // m
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // N
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton("OptionPane.button", "OK"); // JButton
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // cZ
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run impl_1 -prev_step  
+// TclEventType: RUN_LAUNCH
+// [GUI Memory]: 133 MB (+5705kb) [00:14:41]
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu Mar 14 13:14:37 2024] Launched impl_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bA
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 93 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// TclEventType: HW_SESSION_OPEN
+// WARNING: HEventQueue.dispatchEvent() is taking  1155 ms.
+// Tcl Message: open_hw_manager 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+dismissDialog("Open Hardware Manager"); // bA
+// Elapsed time: 54 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // g
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ar
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2022.1   **** Build date : Apr 18 2022 at 16:02:36     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042 
+// Tcl Message: INFO: [Labtools 27-3417] Launching cs_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:   ******** Xilinx cs_server v2022.1.0   ****** Build date   : Apr 12 2022-12:12:08     **** Build number : 2022.1.1649790728       ** Copyright 2017-2024 Xilinx, Inc. All Rights Reserved.    
+// Tcl Message: connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1218.391 ; gain = 0.000 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// WARNING: HEventQueue.dispatchEvent() is taking  7094 ms.
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183BA2484A 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,496 MB. GUI used memory: 75 MB. Current time: 3/14/24, 1:17:26 PM PDT
+// Tcl Message: open_hw_target: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3194.695 ; gain = 1976.305 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/Gyro_Test.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// Elapsed time: 16 seconds
+dismissDialog("Auto Connect"); // bA
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// [Engine Memory]: 2,518 MB (+1294785kb) [00:17:32]
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+dismissDialog("Program Device"); // bC
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/Gyro_Test.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bA
+// Elapsed time: 118 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C.sv", 1); // m
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // K
+selectCodeEditor("I2C.sv", 201, 284); // be
+// Elapsed time: 18 seconds
+selectCodeEditor("I2C.sv", 64, 189); // be
+selectCodeEditor("I2C.sv", 85, 171); // be
+// Elapsed time: 12 seconds
+selectCodeEditor("I2C.sv", 237, 455); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+selectCodeEditor("I2C.sv", 173, 320); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 116, 472); // be
+selectCodeEditor("I2C.sv", 87, 221); // be
+selectCodeEditor("I2C.sv", 170, 492); // be
+selectCodeEditor("I2C.sv", 133, 115); // be
+selectCodeEditor("I2C.sv", 884, 266); // be
+selectCodeEditor("I2C.sv", 168, 362); // be
+selectCodeEditor("I2C.sv", 151, 262); // be
+// Elapsed time: 45 seconds
+selectCodeEditor("I2C.sv", 188, 221); // be
+// Elapsed time: 106 seconds
+selectCodeEditor("I2C.sv", 61, 236); // be
+// Elapsed time: 14 seconds
+selectCodeEditor("I2C.sv", 64, 528); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+selectCodeEditor("I2C.sv", 41, 143); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 15, 345); // be
+selectCodeEditor("I2C.sv", 5, 461); // be
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+dismissDialog("Synthesis is Out-of-date"); // A
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.srcs/utils_1/imports/synth_1/Gyro_Test.dcp with file C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/synth_1/Gyro_Test.dcp 
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,539 MB. GUI used memory: 75 MB. Current time: 3/14/24, 1:23:57 PM PDT
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// 'cW' command handler elapsed time: 6 seconds
+dismissDialog("Launch Runs"); // cZ
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu Mar 14 13:24:01 2024] Launched synth_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/synth_1/runme.log [Thu Mar 14 13:24:01 2024] Launched impl_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bA
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 267 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Bitstream Generation Completed"); // ag
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/Gyro_Test.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bA
+// Elapsed time: 42 seconds
+selectCodeEditor("I2C.sv", 171, 414); // be
+selectCodeEditor("I2C.sv", 82, 223); // be
+selectCodeEditor("I2C.sv", 3, 221); // be
+// Elapsed time: 40 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+dismissDialog("Synthesis is Out-of-date"); // A
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.srcs/utils_1/imports/synth_1/Gyro_Test.dcp with file C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/synth_1/Gyro_Test.dcp 
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // cZ
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Thu Mar 14 13:30:05 2024] Launched synth_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/synth_1/runme.log [Thu Mar 14 13:30:05 2024] Launched impl_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 155 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Bitstream Generation Completed"); // ag
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/Gyro_Test.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bA
+// Elapsed time: 24 seconds
+selectCodeEditor("I2C.sv", 343, 406); // be
+// Elapsed time: 924 seconds
+selectCodeEditor("I2C.sv", 163, 262); // be
+selectCodeEditor("I2C.sv", 160, 149); // be
+selectCodeEditor("I2C.sv", 166, 157); // be
+selectCodeEditor("I2C.sv", 159, 121); // be
+selectCodeEditor("I2C.sv", 170, 294); // be
+selectCodeEditor("I2C.sv", 170, 200); // be
+selectCodeEditor("I2C.sv", 158, 470); // be
+selectCodeEditor("I2C.sv", 161, 582); // be
+selectCodeEditor("I2C.sv", 159, 473); // be
+// Elapsed time: 44 seconds
+selectCodeEditor("I2C.sv", 173, 178); // be
+selectCodeEditor("I2C.sv", 167, 75); // be
+selectCodeEditor("I2C.sv", 155, 161); // be
+selectCodeEditor("I2C.sv", 160, 118); // be
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Save Project"); // al
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "OK"); // JButton
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// 'cW' command handler elapsed time: 5 seconds
+dismissDialog("Launch Runs"); // cZ
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run impl_1 -prev_step  
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Thu Mar 14 13:50:03 2024] Launched impl_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Gyro_Test.sv", 0); // m
+selectCodeEditor("Gyro_Test.sv", 427, 425); // be
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Test.sv", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C.sv", 1); // m
+selectCodeEditor("I2C.sv", 117, 242); // be
+selectCodeEditor("I2C.sv", 144, 243); // be
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 19 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Bitstream Generation Completed"); // ag
+selectCodeEditor("I2C.sv", 252, 308); // be
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.srcs/utils_1/imports/synth_1/Gyro_Test.dcp with file C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/synth_1/Gyro_Test.dcp 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// 'cW' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // cZ
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Thu Mar 14 13:50:59 2024] Launched synth_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/synth_1/runme.log [Thu Mar 14 13:50:59 2024] Launched impl_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/runme.log 
+selectCodeEditor("I2C.sv", 152, 306); // be
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("I2C.sv", 74, 316); // be
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 108 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Bitstream Generation Completed"); // ag
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+dismissDialog("Program Device"); // bC
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/Gyro_Test.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bA
+// HMemoryUtils.trashcanNow. Engine heap size: 2,546 MB. GUI used memory: 70 MB. Current time: 3/14/24, 1:53:58 PM PDT
+// Elapsed time: 114 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // n - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Elaborate Design"); // A
+// Tcl Message: synth_design -rtl -rtl_skip_mlo -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -rtl_skip_mlo -name rtl_1 Starting synth_design Using part: xc7a35ticpg236-1L Top: Gyro_Test 
+// TclEventType: ELABORATE_START
+// TclEventType: ELABORATE_FINISH
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,546 MB. GUI used memory: 69 MB. Current time: 3/14/24, 1:55:08 PM PDT
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// WARNING: HEventQueue.dispatchEvent() is taking  2646 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xc7a35ticpg236-1L 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3999.617 ; gain = 388.223 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 4086.238 ; gain = 474.844 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 4108.062 ; gain = 496.668 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 4108.062 ; gain = 496.668 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 4108.062 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/Basys3_constraints.xdc] Finished Parsing XDC File [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/Basys3_constraints.xdc] Completed Processing XDC Constraints  
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4220.762 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 4240.332 ; gain = 628.938 
+// Tcl Message: 18 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 4240.332 ; gain = 960.574 
+// 'eq' command handler elapsed time: 19 seconds
+// [GUI Memory]: 148 MB (+9161kb) [00:55:17]
+// Elapsed time: 17 seconds
+dismissDialog("Open Elaborated Design"); // bA
+// Elapsed time: 48 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Gyro_Test.sv", 2); // m
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aL
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // m
+// PAPropertyPanels.initPanels (Gyro_Reader (I2C)) elapsed time: 0.3s
+// [GUI Memory]: 158 MB (+2966kb) [00:56:16]
+// Elapsed time: 20 seconds
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // j
+closeTask("RTL Analysis", "Elaborated Design", "DesignTask.RTL_PLANNING");
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Confirm Close"); // A
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,546 MB. GUI used memory: 98 MB. Current time: 3/14/24, 1:56:33 PM PDT
+// Engine heap size: 2,546 MB. GUI used memory: 99 MB. Current time: 3/14/24, 1:56:33 PM PDT
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Close"); // bA
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // K
+selectCodeEditor("I2C.sv", 166, 81); // be
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // j
+closeTask("Program and Debug", "Hardware Manager", "DesignTask.PROGRAM_DEBUG");
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Confirm Close"); // A
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// TclEventType: HW_SESSION_CLOSE
+// Tcl Message: close_hw_manager 
+dismissDialog("Close Hardware Manager"); // bA
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aA
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Gyro_Test (Gyro_Test.sv), SSG_DISP : SevSegDisp (SevSegDisp.sv)]", 3); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Gyro_Test (Gyro_Test.sv), SSG_DISP : SevSegDisp (SevSegDisp.sv)]", 3); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Gyro_Test (Gyro_Test.sv), SSG_DISP : SevSegDisp (SevSegDisp.sv)]", 3, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Gyro_Test (Gyro_Test.sv), SSG_DISP : SevSegDisp (SevSegDisp.sv)]", 3, true, false, false, false, false, true); // D - Double Click - Node
+selectCodeEditor("SevSegDisp.sv", 302, 387); // be
+selectCodeEditor("SevSegDisp.sv", 324, 392); // be
+selectCodeEditor("SevSegDisp.sv", 279, 410); // be
+selectCodeEditor("SevSegDisp.sv", 329, 417); // be
+selectCodeEditor("SevSegDisp.sv", 324, 416); // be
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Test.sv", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C.sv", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Test.sv", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Gyro_Test.sv", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Gyro_Test.sv", 1); // m
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 6); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Basys3_constraints.xdc]", 8, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Basys3_constraints.xdc]", 8, false, false, false, false, false, true); // D - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Gyro_Test.sv", 1); // m
+selectCodeEditor("Gyro_Test.sv", 223, 186); // be
+selectCodeEditor("Gyro_Test.sv", 217, 199); // be
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Basys3_constraints.xdc", 5); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Gyro_Test.sv", 1); // m
+selectCodeEditor("Gyro_Test.sv", 339, 564); // be
+// Elapsed time: 11 seconds
+selectCodeEditor("Gyro_Test.sv", 476, 528); // be
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 23, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.srcs/utils_1/imports/synth_1/Gyro_Test.dcp with file C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/synth_1/Gyro_Test.dcp 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// 'cW' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // cZ
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Thu Mar 14 13:57:53 2024] Launched synth_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/synth_1/runme.log [Thu Mar 14 13:57:53 2024] Launched impl_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/runme.log 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 326 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw_manager 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+dismissDialog("Open Hardware Manager"); // bA
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // g
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ar
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2022.1   **** Build date : Apr 18 2022 at 16:02:36     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042 
+// Tcl Message: INFO: [Labtools 27-3417] Launching cs_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:   ******** Xilinx cs_server v2022.1.0   ****** Build date   : Apr 12 2022-12:12:08     **** Build number : 2022.1.1649790728       ** Copyright 2017-2024 Xilinx, Inc. All Rights Reserved.    
+// Tcl Message: connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 4255.250 ; gain = 0.000 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183BA2484A 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/Gyro_Test.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Auto Connect"); // bA
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/Gyro_Test.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bA
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Test.sv", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C.sv", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SevSegDisp.sv", 3); // m
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // D
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Test.sv", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Gyro_Test.sv", 0); // m
+selectCodeEditor("Gyro_Test.sv", 179, 139); // be
+selectCodeEditor("Gyro_Test.sv", 187, 113); // be
+typeControlKey((HResource) null, "Gyro_Test.sv", 'c'); // be
+typeControlKey((HResource) null, "Gyro_Test.sv", 'c'); // be
+typeControlKey((HResource) null, "Gyro_Test.sv", 'c'); // be
+selectCodeEditor("Gyro_Test.sv", 369, 240); // be
+typeControlKey((HResource) null, "Gyro_Test.sv", 'v'); // be
+selectCodeEditor("Gyro_Test.sv", 429, 200); // be
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Test.sv", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C.sv", 2); // m
+// Elapsed time: 80 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Program Device"); // bC
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Test.sv", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Gyro_Test.sv", 0); // m
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // K
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Test.sv", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Gyro_Test.sv", 0); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Test.sv", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Gyro_Test.sv", 0); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Test.sv", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C.sv", 2); // m
+// Elapsed time: 15 seconds
+selectCodeEditor("I2C.sv", 69, 538); // be
+selectCodeEditor("I2C.sv", 68, 408); // be
+selectCodeEditor("I2C.sv", 70, 279); // be
+selectCodeEditor("I2C.sv", 68, 162); // be
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 23, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.srcs/utils_1/imports/synth_1/Gyro_Test.dcp with file C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/synth_1/Gyro_Test.dcp 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // cZ
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Thu Mar 14 14:06:18 2024] Launched synth_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/synth_1/runme.log [Thu Mar 14 14:06:18 2024] Launched impl_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bA
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 206 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Bitstream Generation Completed"); // ag
+// Elapsed time: 271 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+dismissDialog("Program Device"); // bC
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/Gyro_Test.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bA
+// Elapsed time: 47 seconds
+selectCodeEditor("I2C.sv", 133, 373); // be
+selectCodeEditor("I2C.sv", 198, 349); // be
+selectCodeEditor("I2C.sv", 162, 217); // be
+selectCodeEditor("I2C.sv", 254, 237); // be
+selectCodeEditor("I2C.sv", 152, 373); // be
+// Elapsed time: 90 seconds
+selectCodeEditor("I2C.sv", 212, 128); // be
+// Elapsed time: 13 seconds
+selectCodeEditor("I2C.sv", 75, 193); // be
+selectCodeEditor("I2C.sv", 75, 138); // be
+selectCodeEditor("I2C.sv", 86, 384); // be
+selectCodeEditor("I2C.sv", 67, 75); // be
+selectCodeEditor("I2C.sv", 74, 66); // be
+selectCodeEditor("I2C.sv", 70, 200); // be
+selectCodeEditor("I2C.sv", 74, 326); // be
+selectCodeEditor("I2C.sv", 74, 449); // be
+// Elapsed time: 21 seconds
+selectCodeEditor("I2C.sv", 87, 262); // be
+selectCodeEditor("I2C.sv", 160, 268); // be
+selectCodeEditor("I2C.sv", 177, 393); // be
+selectCodeEditor("I2C.sv", 93, 388); // be
+selectCodeEditor("I2C.sv", 88, 386); // be
+selectCodeEditor("I2C.sv", 90, 512); // be
+selectCodeEditor("I2C.sv", 149, 518); // be
+selectCodeEditor("I2C.sv", 92, 513); // be
+selectCodeEditor("I2C.sv", 156, 518); // be
+selectCodeEditor("I2C.sv", 72, 456); // be
+selectCodeEditor("I2C.sv", 64, 457); // be
+selectCodeEditor("I2C.sv", 72, 455); // be
+selectCodeEditor("I2C.sv", 73, 457); // be
+selectCodeEditor("I2C.sv", 71, 447); // be
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 23, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.srcs/utils_1/imports/synth_1/Gyro_Test.dcp with file C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/synth_1/Gyro_Test.dcp 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // cZ
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Thu Mar 14 14:18:19 2024] Launched synth_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/synth_1/runme.log [Thu Mar 14 14:18:19 2024] Launched impl_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/runme.log 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 140 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Bitstream Generation Completed"); // ag
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+dismissDialog("Program Device"); // bC
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/Gyro_Test.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bA
+// Elapsed time: 33 seconds
+selectCodeEditor("I2C.sv", 176, 517); // be
+selectCodeEditor("I2C.sv", 174, 389); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+selectCodeEditor("I2C.sv", 194, 520); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 187, 451); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 195, 456); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 202, 452); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 178, 457); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 186, 434); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 175, 452); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // D
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // D
+selectCodeEditor("I2C.sv", 177, 392); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 179, 512); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 173, 518); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 171, 446); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 200, 513); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 197, 512); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 196, 514); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 188, 456); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 171, 447); // be
+selectCodeEditor("I2C.sv", 183, 364); // be
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 23, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.srcs/utils_1/imports/synth_1/Gyro_Test.dcp with file C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/synth_1/Gyro_Test.dcp 
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// 'cW' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // cZ
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Thu Mar 14 14:22:11 2024] Launched synth_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/synth_1/runme.log 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu Mar 14 14:22:11 2024] Launched impl_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bA
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 116 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Bitstream Generation Completed"); // ag
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+dismissDialog("Program Device"); // bC
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/Gyro_Test.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bA
+// Elapsed time: 141 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/Gyro_Test.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bA
+// HMemoryUtils.trashcanNow. Engine heap size: 2,546 MB. GUI used memory: 82 MB. Current time: 3/14/24, 2:26:38 PM PDT
+// Elapsed time: 56 seconds
+selectCodeEditor("I2C.sv", 150, 353); // be
+// Elapsed time: 32 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/Gyro_Test.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bA
+// Elapsed time: 96 seconds
+selectCodeEditor("I2C.sv", 156, 111); // be
+selectCodeEditor("I2C.sv", 155, 69); // be
+selectCodeEditor("I2C.sv", 237, 115); // be
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+dismissDialog("Program Device"); // bC
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/Gyro_Test.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bA
+selectCodeEditor("I2C.sv", 259, 227); // be
+// Elapsed time: 49 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("I2C.sv", 161, 327); // be
+selectCodeEditor("I2C.sv", 225, 347); // be
+selectCodeEditor("I2C.sv", 258, 343); // be
+selectCodeEditor("I2C.sv", 263, 289); // be
+selectCodeEditor("I2C.sv", 263, 289); // be
+selectCodeEditor("I2C.sv", 176, 260); // be
+selectCodeEditor("I2C.sv", 255, 284); // be
+selectCodeEditor("I2C.sv", 217, 153); // be
+// Elapsed time: 30 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 23, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.srcs/utils_1/imports/synth_1/Gyro_Test.dcp with file C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/synth_1/Gyro_Test.dcp 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // cZ
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Thu Mar 14 14:31:33 2024] Launched synth_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/synth_1/runme.log [Thu Mar 14 14:31:33 2024] Launched impl_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/runme.log 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 121 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Bitstream Generation Completed"); // ag
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/Gyro_Test.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bA
+// Elapsed time: 149 seconds
+selectCodeEditor("I2C.sv", 199, 473); // be
+// Elapsed time: 56 seconds
+selectCodeEditor("I2C.sv", 183, 464); // be
+selectCodeEditor("I2C.sv", 175, 216); // be
+// Elapsed time: 14 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/Gyro_Test.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bA
+// Elapsed time: 101 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Gyro_Test.sv", 0); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Test.sv", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C.sv", 2); // m
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // n - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Elaborate Design"); // A
+// TclEventType: ELABORATE_START
+// Tcl Message: synth_design -rtl -rtl_skip_mlo -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -rtl_skip_mlo -name rtl_1 Starting synth_design Using part: xc7a35ticpg236-1L Top: Gyro_Test 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,546 MB. GUI used memory: 82 MB. Current time: 3/14/24, 2:39:24 PM PDT
+// DeviceModel: Load Xgds SwingWorker Join Forever elapsed time: 0.5s
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 4255.250 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 4255.250 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 4255.250 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 4255.250 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 4255.250 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/Basys3_constraints.xdc] Finished Parsing XDC File [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/Basys3_constraints.xdc] Completed Processing XDC Constraints  
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 4292.164 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 4295.520 ; gain = 40.270 
+// Tcl Message: 17 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 4295.520 ; gain = 40.270 
+// 'eq' command handler elapsed time: 12 seconds
+// Elapsed time: 11 seconds
+dismissDialog("Open Elaborated Design"); // bA
+selectView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic", 472, 164, 1055, 514, false, false, false, true, false); // f - Popup Trigger
+// [GUI Memory]: 169 MB (+3137kb) [01:39:44]
+// PAPropertyPanels.initPanels (SDA) elapsed time: 0.2s
+// Elapsed time: 196 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Gyro_Test.sv", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Test.sv", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C.sv", 4); // m
+selectCodeEditor("I2C.sv", 71, 196); // be
+selectCodeEditor("I2C.sv", 147, 176); // be
+selectCodeEditor("I2C.sv", 11, 235); // be
+selectCodeEditor("I2C.sv", 9, 226); // be
+selectCodeEditor("I2C.sv", 2, 225); // be
+// Elapsed time: 73 seconds
+selectCodeEditor("I2C.sv", 9, 234); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 69, 144); // be
+selectCodeEditor("I2C.sv", 210, 73); // be
+// WARNING: HEventQueue.dispatchEvent() is taking  1842 ms.
+// Elapsed time: 84 seconds
+selectCodeEditor("I2C.sv", 47, 98); // be
+selectCodeEditor("I2C.sv", 91, 97); // be
+selectCodeEditor("I2C.sv", 98, 97); // be
+selectCodeEditor("I2C.sv", 157, 71); // be
+selectCodeEditor("I2C.sv", 114, 74); // be
+selectCodeEditor("I2C.sv", 115, 178); // be
+selectCodeEditor("I2C.sv", 162, 204); // be
+selectCodeEditor("I2C.sv", 112, 152); // be
+selectCodeEditor("I2C.sv", 97, 162); // be
+selectCodeEditor("I2C.sv", 103, 155); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+selectCodeEditor("I2C.sv", 289, 199); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // D
+selectCodeEditor("I2C.sv", 260, 198); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 168, 162); // be
+// Elapsed time: 13 seconds
+selectCodeEditor("I2C.sv", 133, 165); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+selectCodeEditor("I2C.sv", 283, 197); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 189, 156); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+selectCodeEditor("I2C.sv", 205, 224); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 237, 220); // be
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // D
+selectCodeEditor("I2C.sv", 197, 228); // be
+selectCodeEditor("I2C.sv", 57, 139); // be
+// Elapsed time: 31 seconds
+selectCodeEditor("I2C.sv", 150, 76); // be
+selectCodeEditor("I2C.sv", 1, 93); // be
+selectCodeEditor("I2C.sv", 163, 57); // be
+selectCodeEditor("I2C.sv", 214, 95); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+selectCodeEditor("I2C.sv", 10, 68); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 159, 77); // be
+// WARNING: HEventQueue.dispatchEvent() is taking  1602 ms.
+selectCodeEditor("I2C.sv", 3, 79); // be
+// WARNING: HEventQueue.dispatchEvent() is taking  1682 ms.
+selectCodeEditor("I2C.sv", 24, 289); // be
+selectCodeEditor("I2C.sv", 23, 265); // be
+selectCodeEditor("I2C.sv", 5, 98); // be
+selectCodeEditor("I2C.sv", 2, 96, false, false, false, false, true); // be - Double Click
+selectCodeEditor("I2C.sv", 2, 97); // be
+selectCodeEditor("I2C.sv", 23, 78); // be
+selectCodeEditor("I2C.sv", 17, 73); // be
+// WARNING: HEventQueue.dispatchEvent() is taking  1602 ms.
+selectCodeEditor("I2C.sv", 2, 115); // be
+// Elapsed time: 62 seconds
+selectCodeEditor("I2C.sv", 54, 165); // be
+selectCodeEditor("I2C.sv", 53, 195); // be
+selectCodeEditor("I2C.sv", 51, 156); // be
+selectCodeEditor("I2C.sv", 46, 203); // be
+selectCodeEditor("I2C.sv", 49, 160); // be
+// Elapsed time: 161 seconds
+selectCodeEditor("I2C.sv", 203, 263); // be
+selectCodeEditor("I2C.sv", 234, 283); // be
+selectCodeEditor("I2C.sv", 106, 243); // be
+selectCodeEditor("I2C.sv", 89, 163); // be
+// Elapsed time: 128 seconds
+selectCodeEditor("I2C.sv", 72, 306); // be
+// Elapsed time: 11 seconds
+selectCodeEditor("I2C.sv", 161, 313); // be
+selectCodeEditor("I2C.sv", 194, 312); // be
+selectCodeEditor("I2C.sv", 188, 309); // be
+selectCodeEditor("I2C.sv", 187, 308); // be
+// Elapsed time: 20 seconds
+selectCodeEditor("I2C.sv", 172, 336); // be
+selectCodeEditor("I2C.sv", 121, 327); // be
+selectCodeEditor("I2C.sv", 169, 329); // be
+// Elapsed time: 28 seconds
+selectCodeEditor("I2C.sv", 112, 197); // be
+// Elapsed time: 17 seconds
+selectCodeEditor("I2C.sv", 181, 243); // be
+selectCodeEditor("I2C.sv", 280, 241); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+selectCodeEditor("I2C.sv", 252, 245); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 54, 202); // be
+selectCodeEditor("I2C.sv", 54, 199); // be
+selectCodeEditor("I2C.sv", 170, 197); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+selectCodeEditor("I2C.sv", 146, 221); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 1, 94); // be
+selectCodeEditor("I2C.sv", 3, 74); // be
+// WARNING: HEventQueue.dispatchEvent() is taking  1550 ms.
+selectCodeEditor("I2C.sv", 127, 162); // be
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("I2C.sv", 75, 259); // be
+// Elapsed time: 14 seconds
+selectCodeEditor("I2C.sv", 157, 266); // be
+selectCodeEditor("I2C.sv", 141, 262); // be
+selectCodeEditor("I2C.sv", 177, 263); // be
+selectCodeEditor("I2C.sv", 144, 150); // be
+// Elapsed time: 12 seconds
+selectCodeEditor("I2C.sv", 170, 163); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+selectCodeEditor("I2C.sv", 241, 155); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 99, 57); // be
+selectCodeEditor("I2C.sv", 103, 116); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+selectCodeEditor("I2C.sv", 168, 218); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+// Elapsed time: 26 seconds
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // j
+closeTask("RTL Analysis", "Elaborated Design", "DesignTask.RTL_PLANNING");
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Confirm Close"); // A
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,546 MB. GUI used memory: 106 MB. Current time: 3/14/24, 2:57:51 PM PDT
+// Engine heap size: 2,546 MB. GUI used memory: 107 MB. Current time: 3/14/24, 2:57:51 PM PDT
+// TclEventType: CURR_DESIGN_SET
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Tcl Message: close_design 
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Close"); // bA
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // j
+closeTask("Program and Debug", "Hardware Manager", "DesignTask.PROGRAM_DEBUG");
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Confirm Close"); // A
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// TclEventType: HW_SESSION_CLOSE
+// Tcl Message: close_hw_manager 
+dismissDialog("Close Hardware Manager"); // bA
+// Elapsed time: 271 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Test.sv", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C.sv", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Test.sv", 2); // m
+selectCodeEditor("I2C_Test.sv", 135, 126); // be
+// HMemoryUtils.trashcanNow. Engine heap size: 2,546 MB. GUI used memory: 84 MB. Current time: 3/14/24, 3:27:52 PM PDT
+// Elapsed time: 2550 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 24, true); // n - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw_manager 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+dismissDialog("Open Hardware Manager"); // bA
+// Elapsed time: 22 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // g
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ar
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2022.1   **** Build date : Apr 18 2022 at 16:02:36     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042 
+// Tcl Message: INFO: [Labtools 27-3417] Launching cs_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:   ******** Xilinx cs_server v2022.1.0   ****** Build date   : Apr 12 2022-12:12:08     **** Build number : 2022.1.1649790728       ** Copyright 2017-2024 Xilinx, Inc. All Rights Reserved.    
+// Tcl Message: connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 4313.582 ; gain = 0.000 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183BA2484A 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/Gyro_Test.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Auto Connect"); // bA
+// Elapsed time: 34 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/Gyro_Test.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bA
+// Elapsed time: 132 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C.sv", 2); // m
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // K
+// HMemoryUtils.trashcanNow. Engine heap size: 2,546 MB. GUI used memory: 86 MB. Current time: 3/14/24, 3:57:53 PM PDT
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183BA2484A 
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Elapsed time: 609 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Close Hardware Target"); // n
+// Elapsed time: 26 seconds
+selectCodeEditor("I2C.sv", 139, 320); // be
+// Elapsed time: 104 seconds
+selectCodeEditor("I2C.sv", 167, 204); // be
+// Elapsed time: 32 seconds
+selectCodeEditor("I2C.sv", 70, 330); // be
+selectCodeEditor("I2C.sv", 159, 331); // be
+// Elapsed time: 92 seconds
+selectCodeEditor("I2C.sv", 177, 218); // be
+selectCodeEditor("I2C.sv", 255, 185); // be
+selectCodeEditor("I2C.sv", 146, 173); // be
+selectCodeEditor("I2C.sv", 153, 180); // be
+selectCodeEditor("I2C.sv", 146, 180); // be
+// Elapsed time: 37 seconds
+selectCodeEditor("I2C.sv", 137, 120); // be
+selectCodeEditor("I2C.sv", 190, 219); // be
+selectCodeEditor("I2C.sv", 322, 224); // be
+// Elapsed time: 15 seconds
+selectCodeEditor("I2C.sv", 193, 175); // be
+selectCodeEditor("I2C.sv", 37, 154); // be
+// WARNING: HEventQueue.dispatchEvent() is taking  1388 ms.
+// Elapsed time: 220 seconds
+selectCodeEditor("I2C.sv", 99, 390); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+selectCodeEditor("I2C.sv", 105, 369); // be
+selectCodeEditor("I2C.sv", 96, 389); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+// Elapsed time: 19 seconds
+selectCodeEditor("I2C.sv", 234, 431); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 232, 304); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 242, 179); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 246, 177); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 241, 48); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 241, 114); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 242, 179); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 240, 54); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 73, 156); // be
+selectCodeEditor("I2C.sv", 74, 287); // be
+selectCodeEditor("I2C.sv", 70, 283); // be
+selectCodeEditor("I2C.sv", 71, 415); // be
+selectCodeEditor("I2C.sv", 72, 411); // be
+selectCodeEditor("I2C.sv", 69, 413); // be
+selectCodeEditor("I2C.sv", 72, 412); // be
+selectCodeEditor("I2C.sv", 70, 414); // be
+selectCodeEditor("I2C.sv", 69, 388); // be
+selectCodeEditor("I2C.sv", 69, 414); // be
+selectCodeEditor("I2C.sv", 233, 432); // be
+selectCodeEditor("I2C.sv", 228, 432); // be
+selectCodeEditor("I2C.sv", 237, 432); // be
+selectButton("FindAndReplaceDialog.bb_Close", "Close"); // JButton
+selectCodeEditor("I2C.sv", 233, 434); // be
+selectCodeEditor("I2C.sv", 233, 427); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 234, 550); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 235, 559); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 234, 372); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 234, 494); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 236, 368); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 232, 491); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 234, 432); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 72, 406); // be
+selectCodeEditor("I2C.sv", 78, 289); // be
+selectCodeEditor("I2C.sv", 73, 287); // be
+selectCodeEditor("I2C.sv", 71, 162); // be
+selectCodeEditor("I2C.sv", 72, 163); // be
+selectCodeEditor("I2C.sv", 70, 162); // be
+selectCodeEditor("I2C.sv", 74, 158); // be
+selectCodeEditor("I2C.sv", 75, 157); // be
+selectCodeEditor("I2C.sv", 190, 226); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+selectCodeEditor("I2C.sv", 194, 237); // be
+selectCodeEditor("I2C.sv", 177, 319); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 102, 354); // be
+selectCodeEditor("I2C.sv", 156, 340); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+// Elapsed time: 15 seconds
+selectCodeEditor("I2C.sv", 196, 297); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+typeControlKey((HResource) null, "I2C.sv", 'c'); // be
+selectCodeEditor("I2C.sv", 223, 446); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 226, 410); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 218, 427); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 208, 512); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 212, 411); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 201, 243); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 205, 394); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 210, 293); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 204, 432); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 216, 321); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 203, 476); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 212, 375); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 233, 267); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 207, 411); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectCodeEditor("I2C.sv", 215, 295); // be
+typeControlKey((HResource) null, "I2C.sv", 'v'); // be
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 35 seconds
+selectCodeEditor("I2C.sv", 69, 165); // be
+// Elapsed time: 47 seconds
+selectCodeEditor("I2C.sv", 183, 251); // be
+// Elapsed time: 20 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 23, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.srcs/utils_1/imports/synth_1/Gyro_Test.dcp with file C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/synth_1/Gyro_Test.dcp 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // cZ
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Thu Mar 14 16:12:47 2024] Launched synth_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/synth_1/runme.log [Thu Mar 14 16:12:47 2024] Launched impl_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bA
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 65 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ag
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Test.sv", 1); // m
+selectCodeEditor("I2C_Test.sv", 249, 182); // be
+selectCodeEditor("I2C_Test.sv", 212, 182); // be
+selectCodeEditor("I2C_Test.sv", 237, 213); // be
+selectCodeEditor("I2C_Test.sv", 227, 50); // be
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C.sv", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Test.sv", 1); // m
+selectCodeEditor("I2C_Test.sv", 220, 191); // be
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 23, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("No Implementation Results Available"); // A
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// 'cW' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // cZ
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Thu Mar 14 16:14:30 2024] Launched synth_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/synth_1/runme.log [Thu Mar 14 16:14:30 2024] Launched impl_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 59 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ag
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6156] failed synthesizing module 'BCD' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/BCD.sv:18]. ]", 5, true); // ah - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Wyatt\Documents\Vivado\CPE233_Final\OTTER_MCU\OTTER_MCU.srcs\sources_1\new\BCD.sv;-;;-;16;-;line;-;18;-;;-;16;-;"); // ah
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-448] named port connection 'SDA' does not exist for instance 'Gyro_Reader' of module 'I2C' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.srcs/sources_1/new/Gyro_Test.sv:32]. ]", 4, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Wyatt\Documents\Vivado\CPE233_Final\Accelerometer_Test\I2C\I2C.srcs\sources_1\new\Gyro_Test.sv;-;;-;16;-;line;-;32;-;;-;16;-;"); // ah
+selectCodeEditor("Gyro_Test.sv", 216, 222); // be
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C.sv", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Test.sv", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Gyro_Test.sv", 0); // m
+selectCodeEditor("Gyro_Test.sv", 199, 232); // be
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 23, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("No Implementation Results Available"); // A
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // cZ
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Thu Mar 14 16:16:03 2024] Launched synth_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/synth_1/runme.log [Thu Mar 14 16:16:03 2024] Launched impl_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+selectButton(PAResourceItoN.MsgView_CLEAR_MESSAGES_RESULTING_FROM_USER_EXECUTED, "Messages_cleanUpMessages"); // D
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 130 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Bitstream Generation Completed"); // ag
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/Gyro_Test.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bA
+// Elapsed time: 23 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Test.sv", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C.sv", 2); // m
+selectCodeEditor("I2C.sv", 376, 198); // be
+selectCodeEditor("I2C.sv", 415, 206); // be
+selectCodeEditor("I2C.sv", 262, 198); // be
+selectCodeEditor("I2C.sv", 137, 135); // be
+selectCodeEditor("I2C.sv", 146, 145); // be
+// Elapsed time: 33 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 24 seconds
+selectCodeEditor("I2C.sv", 178, 62); // be
+selectCodeEditor("I2C.sv", 139, 308); // be
+selectCodeEditor("I2C.sv", 143, 313); // be
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 23, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.srcs/utils_1/imports/synth_1/Gyro_Test.dcp with file C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/synth_1/Gyro_Test.dcp 
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // cZ
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu Mar 14 16:20:11 2024] Launched synth_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/synth_1/runme.log [Thu Mar 14 16:20:11 2024] Launched impl_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bA
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 121 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Bitstream Generation Completed"); // ag
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/Gyro_Test.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bA
+// Elapsed time: 28 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/Gyro_Test.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bA
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/Gyro_Test.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bA
+// Elapsed time: 27 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/Gyro_Test.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bA
+// Elapsed time: 13 seconds
+selectCodeEditor("I2C.sv", 225, 282); // be
+selectCodeEditor("I2C.sv", 225, 176); // be
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Test.sv", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Gyro_Test.sv", 0); // m
+selectCodeEditor("Gyro_Test.sv", 427, 287); // be
+selectCodeEditor("Gyro_Test.sv", 420, 282); // be
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C.sv", 2); // m
+selectCodeEditor("I2C.sv", 224, 96); // be
+// Elapsed time: 13 seconds
+selectCodeEditor("I2C.sv", 215, 243); // be
+selectCodeEditor("I2C.sv", 254, 387); // be
+selectCodeEditor("I2C.sv", 248, 181); // be
+// Elapsed time: 11 seconds
+selectCodeEditor("I2C.sv", 261, 395); // be
+// Elapsed time: 57 seconds
+selectCodeEditor("I2C.sv", 138, 283); // be
+selectCodeEditor("I2C.sv", 369, 176); // be
+selectCodeEditor("I2C.sv", 374, 215); // be
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("I2C.sv", 374, 119); // be
+selectCodeEditor("I2C.sv", 373, 118); // be
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 23, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.srcs/utils_1/imports/synth_1/Gyro_Test.dcp with file C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/synth_1/Gyro_Test.dcp 
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // cZ
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Thu Mar 14 16:26:13 2024] Launched synth_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/synth_1/runme.log [Thu Mar 14 16:26:13 2024] Launched impl_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+selectCodeEditor("I2C.sv", 317, 118); // be
+// Elapsed time: 13 seconds
+selectCodeEditor("I2C.sv", 381, 117); // be
+selectCodeEditor("I2C.sv", 216, 94); // be
+selectCodeEditor("I2C.sv", 80, 284); // be
+selectCodeEditor("I2C.sv", 14, 252); // be
+selectCodeEditor("I2C.sv", 32, 286); // be
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// HMemoryUtils.trashcanNow. Engine heap size: 2,546 MB. GUI used memory: 88 MB. Current time: 3/14/24, 4:27:54 PM PDT
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 106 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Bitstream Generation Completed"); // ag
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/Gyro_Test.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bA
+// Elapsed time: 55 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_REFRESH_DEVICE, "Refresh device"); // g
+selectButton(PAResourceOtoP.ProgramDebugTab_REFRESH_DEVICE, "Refresh device"); // g
+selectMenuItem((HResource) null, "xc7a35t_0"); // ar
+// Run Command: PAResourceCommand.PACommandNames_REFRESH_DEVICE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/Gyro_Test.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bA
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Test.sv", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Gyro_Test.sv", 0); // m
+selectCodeEditor("Gyro_Test.sv", 238, 58); // be
+// Elapsed time: 16 seconds
+selectCodeEditor("Gyro_Test.sv", 175, 96); // be
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/Gyro_Test.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bA
+selectCodeEditor("Gyro_Test.sv", 244, 90); // be
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 23, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.srcs/utils_1/imports/synth_1/Gyro_Test.dcp with file C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/synth_1/Gyro_Test.dcp 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // cZ
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Thu Mar 14 16:30:50 2024] Launched synth_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/synth_1/runme.log [Thu Mar 14 16:30:50 2024] Launched impl_1... Run output will be captured here: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bA
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 134 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Bitstream Generation Completed"); // ag
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // g
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Wyatt/Documents/Vivado/CPE233_Final/Accelerometer_Test/I2C/I2C.runs/impl_1/Gyro_Test.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 4 seconds
+dismissDialog("Program Device"); // bA
+// Elapsed time: 529 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C.sv", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "I2C_Test.sv", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "BCD.sv", 3); // m
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // j
+closeTask("Program and Debug", "Hardware Manager", "DesignTask.PROGRAM_DEBUG");
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Confirm Close"); // A
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// TclEventType: HW_SESSION_CLOSE
+// Tcl Message: close_hw_manager 
+dismissDialog("Close Hardware Manager"); // bA

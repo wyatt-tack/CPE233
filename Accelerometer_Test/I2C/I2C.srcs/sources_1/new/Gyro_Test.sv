@@ -14,7 +14,8 @@
 
 module Gyro_Test(
    input CLK,
-   output logic SDA, SCL, 
+   output logic SCL, 
+   inout SDA,
    output [7:0] CATHODES,
    output [3:0] ANODES
     );
@@ -29,7 +30,7 @@ module Gyro_Test(
    // Declare I2C Gyro Reader ///////////////////////////////////////////////
    I2C Gyro_Reader ( .clk(CLK), .I2CAddr(I2CAddr), .regAddrR(regAddrR), 
                     .regAddrW(regAddrW), .dataR(dataR), .dataW(dataW),
-                    .SDA(SDA), .SCL(SCL));
+                    .SDAin(SDA), .SCL(SCL));
     
    // Declare Seven Segment Display /////////////////////////////////////////
    SevSegDisp SSG_DISP (.DATA_IN(dataR), .CLK(CLK), .MODE(1'b0),
