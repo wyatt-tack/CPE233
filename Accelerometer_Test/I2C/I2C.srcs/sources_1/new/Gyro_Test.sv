@@ -17,10 +17,13 @@ module Gyro_Test(
    output logic SCL, 
    inout SDA,
    output [7:0] CATHODES,
-   output [3:0] ANODES
+   output [3:0] ANODES,
+   input GND1, GND2
     );
+    assign GND1=1'b0;
+    assign GND2=1'b0;
    logic [7:0] I2CAddr, regAddrR, regAddrW;
-   logic [15:0] dataR;
+   logic [7:0] dataR;
    logic [7:0] dataW;
    // Set I2C address and specific read address /////////////////////////////
    assign I2CAddr = 8'h68;
@@ -33,7 +36,7 @@ module Gyro_Test(
                     .SDAin(SDA), .SCL(SCL));
     
    // Declare Seven Segment Display /////////////////////////////////////////
-   SevSegDisp SSG_DISP (.DATA_IN(dataR), .CLK(CLK), .MODE(1'b0),
+   SevSegDisp SSG_DISP (.DATA_IN({8'h00, dataR}), .CLK(CLK), .MODE(1'b0),
                        .CATHODES(CATHODES), .ANODES(ANODES));    
     
 endmodule

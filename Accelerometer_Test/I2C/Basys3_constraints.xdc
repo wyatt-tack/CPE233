@@ -123,17 +123,21 @@ set_property PACKAGE_PIN W4 [get_ports {ANODES[3]}]
 
 ###Pmod Header JA
 #Sch name = JA1
-set_property PACKAGE_PIN J1 [get_ports {SDA}]					
-	set_property IOSTANDARD LVCMOS33 [get_ports {SDA}]
+set_property PACKAGE_PIN J1 [get_ports {GND1}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {GND1}]
+	set_property PULLDOWN TRUE [get_ports {GND1}]
 #Sch name = JA2
-set_property PACKAGE_PIN L2 [get_ports {SCL}]					
-	set_property IOSTANDARD LVCMOS33 [get_ports {SCL}]
+set_property PACKAGE_PIN L2 [get_ports {GND2}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {GND2}]
+	set_property PULLDOWN TRUE [get_ports {GND2}]
 ###Sch name = JA3
-#set_property PACKAGE_PIN J2 [get_ports {clk}]					
-#	set_property IOSTANDARD LVCMOS33 [get_ports {clk}]
-###Sch name = JA4
-##set_property PACKAGE_PIN G2 [get_ports {JA[3]}]					
-#	#set_property IOSTANDARD LVCMOS33 [get_ports {JA[3]}]
+set_property PACKAGE_PIN J2 [get_ports {SDA}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {SDA}]
+	set_property PULLUP TRUE [get_ports {SDA}]
+##Sch name = JA4
+set_property PACKAGE_PIN G2 [get_ports {SCL}]			    		
+	set_property IOSTANDARD LVCMOS33 [get_ports {SCL}]
+	set_property PULLUP TRUE [get_ports {SCL}]
 ###Sch name = JA7
 ##set_property PACKAGE_PIN H1 [get_ports {JA[4]}]					
 #	#set_property IOSTANDARD LVCMOS33 [get_ports {JA[4]}]

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date             : Thu Mar 14 16:32:50 2024
+| Date             : Fri Mar 15 04:24:06 2024
 | Host             : MSI running 64-bit major release  (build 9200)
 | Command          : report_power -file Gyro_Test_power_routed.rpt -pb Gyro_Test_power_summary_routed.pb -rpx Gyro_Test_power_routed.rpx
 | Design           : Gyro_Test
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.063        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.001        |
+| Dynamic (W)              | 0.002        |
 | Device Static (W)        | 0.062        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 99.7         |
@@ -52,15 +52,15 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      333 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       94 |     20800 |            0.45 |
+| Clocks         |     0.001 |        3 |       --- |             --- |
+| Slice Logic    |    <0.001 |      276 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       76 |     20800 |            0.37 |
 |   CARRY4       |    <0.001 |       10 |      8150 |            0.12 |
-|   Register     |    <0.001 |      187 |     41600 |            0.45 |
+|   Register     |    <0.001 |      161 |     41600 |            0.39 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
 |   F7/F8 Muxes  |     0.000 |        7 |     32600 |            0.02 |
-|   Others       |     0.000 |        7 |       --- |             --- |
-| Signals        |    <0.001 |      288 |       --- |             --- |
+|   Others       |     0.000 |        5 |       --- |             --- |
+| Signals        |    <0.001 |      231 |       --- |             --- |
 | I/O            |    <0.001 |       15 |       106 |           14.15 |
 | Static Power   |     0.062 |          |           |                 |
 | Total          |     0.063 |          |           |                 |
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       0.950 |     0.007 |       0.001 |      0.006 |       NA    | Unspecified | NA         |
+| Vccint    |       0.950 |     0.008 |       0.002 |      0.006 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.011 |       0.000 |      0.011 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -142,7 +142,7 @@ Table of Contents
 +-----------+-----------+
 | Name      | Power (W) |
 +-----------+-----------+
-| Gyro_Test |     0.001 |
+| Gyro_Test |     0.002 |
 +-----------+-----------+
 
 

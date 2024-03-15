@@ -18,7 +18,8 @@
 
 module I2C_Test();
    logic CLK;
-   logic SDA, SCL;
+   wire SDA; 
+   logic SCL;
 //set parameters 
 logic [7:0] I2CAddr, regAddrR, regAddrW;
 logic [15:0] dataR;

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date                      : Thu Mar 14 16:32:25 2024
+| Date                      : Fri Mar 15 04:23:32 2024
 | Host                      : MSI running 64-bit major release  (build 9200)
 | Command                   : report_io -file Gyro_Test_io_placed.rpt
 | Design                    : Gyro_Test
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            15 |
+|            17 |
 +---------------+
 
 
@@ -111,7 +111,7 @@ Table of Contents
 | F18        |             | High Range | IO_L2N_T0_D03_14             | User IO       |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | F19        |             |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | G1         |             |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
-| G2         |             | High Range | IO_L1N_T0_AD4N_35            | User IO       |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| G2         | SCL         | High Range | IO_L1N_T0_AD4N_35            | OUTPUT        | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      | PULLUP    |          |      | NONE             |              |                   |              |
 | G3         |             | High Range | IO_L1P_T0_AD4P_35            | User IO       |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | G7         |             |            | MGTAVTT                      | Gigabit Power |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | G8         |             |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
@@ -136,8 +136,8 @@ Table of Contents
 | H17        |             | High Range | IO_L5P_T0_D06_14             | User IO       |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | H18        |             |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | H19        |             | High Range | IO_L4P_T0_D04_14             | User IO       |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| J1         | SDA         | High Range | IO_L3N_T0_DQS_AD5N_35        | BIDIR         | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
-| J2         |             | High Range | IO_L2N_T0_AD12N_35           | User IO       |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| J1         | GND1        | High Range | IO_L3N_T0_DQS_AD5N_35        | INPUT         | LVCMOS33    |      35 |            |      |                     |                 NONE |         | FIXED      | PULLDOWN  |          |      | NONE             |              |                   |              |
+| J2         | SDA         | High Range | IO_L2N_T0_AD12N_35           | BIDIR         | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      | PULLUP    |          |      | NONE             |              |                   |              |
 | J3         |             | High Range | IO_L7P_T1_AD6P_35            | User IO       |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | J7         |             | High Range | VCCO_35                      | VCCO          |             |      35 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
 | J8         |             |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
@@ -160,7 +160,7 @@ Table of Contents
 | K18        |             | High Range | IO_L8N_T1_D12_14             | User IO       |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | K19        |             | High Range | IO_L6P_T0_FCS_B_14           | User IO       |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | L1         |             | High Range | IO_L6N_T0_VREF_35            | User IO       |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| L2         | SCL         | High Range | IO_L5N_T0_AD13N_35           | OUTPUT        | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| L2         | GND2        | High Range | IO_L5N_T0_AD13N_35           | INPUT         | LVCMOS33    |      35 |            |      |                     |                 NONE |         | FIXED      | PULLDOWN  |          |      | NONE             |              |                   |              |
 | L3         |             | High Range | IO_L8P_T1_AD14P_35           | User IO       |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | L7         |             | High Range | VCCO_35                      | VCCO          |             |      35 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
 | L8         |             |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
