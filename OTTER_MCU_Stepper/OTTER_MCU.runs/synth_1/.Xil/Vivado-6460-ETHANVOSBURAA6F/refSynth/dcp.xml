@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Checkpoint Version="20" Minor="0">
+	<BUILD_NUMBER Name="3900603"/>
+	<FULL_BUILD Name="SW Build 3900603 on Fri Jun 16 19:31:24 MDT 2023"/>
+	<PRODUCT Name="Vivado v2023.1.1 (64-bit)"/>
+	<Part Name="xc7a35ticpg236-1L"/>
+	<Top Name="OTTER_Wrapper"/>
+	<DisableAutoIOBuffers Name="0"/>
+	<OutOfContext Name="0"/>
+	<RunGenerated Name="1"/>
+	<HDPlatform Name="0"/>
+	<File Type="VERILOG_STUB" Name="OTTER_Wrapper_stub.v" ModTime="1710508283"/>
+	<File Type="VHDL_STUB" Name="OTTER_Wrapper_stub.vhdl" ModTime="1710508283"/>
+	<File Type="SHAPE" Name="OTTER_Wrapper.shape" ModTime="1710508283"/>
+	<File Type="EDIF" Name="OTTER_Wrapper.edf" ModTime="1710508283"/>
+	<File Type="XN" Name="OTTER_Wrapper.xn" ModTime="1710508283"/>
+	<File Type="INCR" Name="OTTER_Wrapper.incr" ModTime="1710508283"/>
+	<File Type="RDA" Name="OTTER_Wrapper.rda" ModTime="1710508283"/>
+	<File Type="JSON_RDA" Name="OTTER_Wrapper_rda.json" ModTime="1710508283"/>
+	<File Type="WDF" Name="OTTER_Wrapper.wdf" ModTime="1710508283"/>
+	<File Type="SYNTH" Name="OTTER_Wrapper.synth" ModTime="1710508283"/>
+</Checkpoint>
+
