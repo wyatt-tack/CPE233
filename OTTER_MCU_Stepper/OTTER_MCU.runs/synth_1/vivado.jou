@@ -3,8 +3,8 @@
 # SW Build 3900603 on Fri Jun 16 19:31:24 MDT 2023
 # IP Build 3900379 on Sat Jun 17 05:28:05 MDT 2023
 # SharedData Build 3899622 on Fri Jun 16 03:34:24 MDT 2023
-# Start of session at: Fri Mar 15 06:45:04 2024
-# Process ID: 6460
+# Start of session at: Fri Mar 15 11:30:59 2024
+# Process ID: 3984
 # Current directory: Z:/Documents/git/CPE233_Final/OTTER_MCU_Stepper/OTTER_MCU.runs/synth_1
 # Command line: vivado.exe -log OTTER_Wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source OTTER_Wrapper.tcl
 # Log file: Z:/Documents/git/CPE233_Final/OTTER_MCU_Stepper/OTTER_MCU.runs/synth_1/OTTER_Wrapper.vds

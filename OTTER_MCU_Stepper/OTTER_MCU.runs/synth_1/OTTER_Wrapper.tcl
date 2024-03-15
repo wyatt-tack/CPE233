@@ -91,7 +91,10 @@ set_property ip_output_repo z:/Documents/git/CPE233_Final/OTTER_MCU_Stepper/OTTE
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_mem Z:/Documents/git/CPE233_Final/OTTER_MCU_Stepper/OTTER_MCU.srcs/sources_1/new/otter_memory.mem
+read_mem {
+  Z:/Documents/git/CPE233_Final/OTTER_MCU_Stepper/OTTER_MCU.srcs/sources_1/new/otter_memory.mem
+  {//Mac/git/CPE233_Final/Assembly Code/StepperMotor.mem}
+}
 read_verilog -library xil_defaultlib -sv {
   Z:/Documents/git/CPE233_Final/OTTER_MCU_Stepper/OTTER_MCU.srcs/sources_1/new/ALU.sv
   Z:/Documents/git/CPE233_Final/OTTER_MCU_Stepper/OTTER_MCU.srcs/sources_1/new/BCD.sv

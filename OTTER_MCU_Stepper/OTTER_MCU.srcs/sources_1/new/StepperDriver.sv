@@ -32,9 +32,8 @@ module StepperDriver(
     // Set up clock register
     logic [31:0] clk_reg = 0;
     logic sclk = 0;
-    logic [31:0] accVal_reg;
+    logic reverse_flag = 0;
     
-    assign accVal_reg = 300000 - (accVal * 100);
     // Create sclk of 2ms with a 100MHz clock
     always_ff @(posedge clk) begin
         
@@ -51,14 +50,23 @@ module StepperDriver(
     end
 
     typedef enum {pole_1, pole_2, pole_3, pole_4} pole_type;
-    pole_type pole, next_pole;
+    pole_type pole, next_pole, reverse_next_pole;
+
+    initial begin
+        pole = pole_1;
+        next_pole = pole_2;
+        reverse_next_pole = pole_3;
+    end
 
     always_ff @(posedge sclk) begin
         if (halt) begin
             // Do Nothing
         end
-        else begin
+        else if (!reverse_flag) begin
             pole <= next_pole;
+        end
+        else begin
+            pole <= reverse_next_pole;
         end
     end
 
@@ -70,24 +78,32 @@ module StepperDriver(
                 pole2 = 0;
                 pole3 = 0;
                 pole4 = 0;
+                next_pole = pole_2;
+                reverse_next_pole = pole_4;
             end
             pole_2: begin
                 pole1 = 0;
                 pole2 = 1;
                 pole3 = 0;
                 pole4 = 0;
+                next_pole = pole_3;
+                reverse_next_pole = pole_1;
             end
             pole_3: begin
                 pole1 = 0;
                 pole2 = 0;
                 pole3 = 1;
                 pole4 = 0;
+                next_pole = pole_4;
+                reverse_next_pole = pole_2;
             end
             pole_4: begin
                 pole1 = 0;
                 pole2 = 0;
                 pole3 = 0;
                 pole4 = 1;
+                next_pole = pole_1;
+                reverse_next_pole = pole_3;
             end
             default: begin
                 pole1 = 0;

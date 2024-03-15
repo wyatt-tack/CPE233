@@ -21,7 +21,7 @@ module OTTER_Wrapper(
    input BTNC,
    input [15:0] SWITCHES,
    input [7:0] JB,
-   input [7:0] JC,
+   input JC,
    
    // Outputs
    output logic [15:0] LEDS,
@@ -40,9 +40,9 @@ module OTTER_Wrapper(
            
     // OUTPUT PORT IDS //////////////////////////////////////////////////////
     // In future labs you can add more MMIO
-    localparam LEDS_AD    = 32'h11000020; //32'h11000020
-    localparam SSEG_AD    = 32'h11000040; //32'h11000040
-    localparam JA_AD      = 32'h11000100; // Stepper Motors
+    localparam LEDS_AD     = 32'h11000020; //32'h11000020
+    localparam SSEG_AD     = 32'h11000040; //32'h11000040
+    localparam JA_AD       = 32'h11000100; // Stepper Motors
     
    // Signals for connecting OTTER_MCU to OTTER_wrapper /////////////////////
    logic clk_50 = 0;
@@ -78,7 +78,7 @@ module OTTER_Wrapper(
         .data5(JB[5]),
         .data6(JB[6]),
         .data7(JB[7]),
-        .axisIn(JC[0]),
+        .axisIn(JC),
         .data(data),
         .axisOut(axis)
    );
