@@ -2,12 +2,12 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Fri Mar  8 10:16:55 2024
-# Process ID: 20064
-# Current directory: C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.runs/synth_1
+# Start of session at: Fri Mar 15 11:32:02 2024
+# Process ID: 25332
+# Current directory: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.runs/synth_1
 # Command line: vivado.exe -log OTTER_Wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source OTTER_Wrapper.tcl
-# Log file: C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.runs/synth_1/OTTER_Wrapper.vds
-# Journal file: C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.runs/synth_1\vivado.jou
+# Log file: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.runs/synth_1/OTTER_Wrapper.vds
+# Journal file: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.runs/synth_1\vivado.jou
 # Running On: MSI, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 4, Host memory: 8403 MB
 #-----------------------------------------------------------
 source OTTER_Wrapper.tcl -notrace

@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.runs/synth_1/OTTER_Wrapper.tcl"
+  variable script "C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.runs/synth_1/OTTER_Wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 1
 set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35ticpg236-1L
@@ -77,34 +78,35 @@ create_project -in_memory -part xc7a35ticpg236-1L
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.cache/wt [current_project]
-set_property parent.project_path C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.cache/wt [current_project]
+set_property parent.project_path C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.cache/ip [current_project]
+set_property ip_output_repo c:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_mem C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/otter_memory.mem
+read_mem C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/otter_memory.mem
 read_verilog -library xil_defaultlib -sv {
-  C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/ALU.sv
-  C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/BCD.sv
-  C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Branch_Add_Gen.sv
-  C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Branch_Cond_Gen.sv
-  C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CSR.sv
-  C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CU_DCDR.sv
-  C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CU_FSM.sv
-  C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CathodeDriver.sv
-  C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Debouncer.sv
-  C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/IMMED_GEN.sv
-  C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Mux_2x4.sv
-  C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Mux_3x8.sv
-  C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_MCU.sv
-  C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/PC.sv
-  C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/RegFile.sv
-  C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/SevSegDisp.sv
-  C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/otter_memory_v1_07.sv
-  C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_Wrapper_v1_02.sv
+  C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/ALU.sv
+  C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/BCD.sv
+  C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Branch_Add_Gen.sv
+  C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Branch_Cond_Gen.sv
+  C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CSR.sv
+  C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CU_DCDR.sv
+  C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CU_FSM.sv
+  C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CathodeDriver.sv
+  C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Debouncer.sv
+  C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/I2C.sv
+  C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/IMMED_GEN.sv
+  C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Mux_2x4.sv
+  C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Mux_3x8.sv
+  C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_MCU.sv
+  C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/PC.sv
+  C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/RegFile.sv
+  C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/SevSegDisp.sv
+  C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/otter_memory_v1_07.sv
+  C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_Wrapper_v1_02.sv
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -115,8 +117,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/Basys3_constraints.xdc
-set_property used_in_implementation false [get_files C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/Basys3_constraints.xdc]
+read_xdc C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/Basys3_constraints.xdc
+set_property used_in_implementation false [get_files C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/Basys3_constraints.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 

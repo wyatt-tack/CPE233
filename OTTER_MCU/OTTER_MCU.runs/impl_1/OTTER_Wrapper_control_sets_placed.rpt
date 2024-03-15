@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Fri Mar  8 10:21:10 2024
+| Date         : Fri Mar 15 11:34:20 2024
 | Host         : MSI running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file OTTER_Wrapper_control_sets_placed.rpt
 | Design       : OTTER_Wrapper
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    19 |
-|    Minimum number of control sets                        |    19 |
+| Total control sets                                       |    28 |
+|    Minimum number of control sets                        |    28 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    50 |
+| Unused register locations in slices containing registers |    60 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    19 |
-| >= 0 to < 4        |     4 |
-| >= 4 to < 6        |     2 |
-| >= 6 to < 8        |     0 |
-| >= 8 to < 10       |     1 |
-| >= 10 to < 12      |     0 |
-| >= 12 to < 14      |     1 |
+| Total control sets |    28 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     4 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     6 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     2 |
 | >= 14 to < 16      |     0 |
-| >= 16              |    11 |
+| >= 16              |    12 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,40 +58,49 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              24 |           15 |
+| No           | No                    | No                     |              45 |           26 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              61 |           18 |
-| Yes          | No                    | No                     |              68 |           40 |
+| No           | Yes                   | No                     |              70 |           17 |
+| Yes          | No                    | No                     |             199 |           70 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             141 |           67 |
+| Yes          | Yes                   | No                     |             146 |           79 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------------+--------------------------------------------+------------------------------------------+------------------+----------------+--------------+
-|         Clock Signal        |                Enable Signal               |             Set/Reset Signal             | Slice Load Count | Bel Load Count | Bels / Slice |
-+-----------------------------+--------------------------------------------+------------------------------------------+------------------+----------------+--------------+
-|  Debouncer1/clk_800z        |                                            |                                          |                1 |              2 |         2.00 |
-|  SSG_DISP/CathMod/s_clk_500 |                                            | SSG_DISP/CathMod/r_disp_digit[0]_i_1_n_0 |                1 |              2 |         2.00 |
-|  SSG_DISP/CathMod/s_clk_500 |                                            | SSG_DISP/CathMod/r_disp_digit[0]         |                1 |              2 |         2.00 |
-|  CLK_IBUF_BUFG              |                                            |                                          |                2 |              2 |         1.00 |
-|  clk_50_BUFG                | OTTER_MCU/CU_FSM/Q[1]                      |                                          |                4 |              4 |         1.00 |
-|  clk_50_BUFG                |                                            | BTNC_IBUF                                |                3 |              5 |         1.67 |
-|  SSG_DISP/CathMod/s_clk_500 |                                            |                                          |                6 |              9 |         1.50 |
-|  clk_50_BUFG                |                                            |                                          |                6 |             12 |         2.00 |
-|  clk_50_BUFG                | OTTER_MCU/Memory/ioBuffer[15]_i_3_0[0]     |                                          |                6 |             16 |         2.67 |
-|  clk_50_BUFG                | OTTER_MCU/Memory/ioBuffer[15]_i_5_0[0]     |                                          |               11 |             16 |         1.45 |
-|  clk_50_BUFG                | OTTER_MCU/Memory/FSM_onehot_PS_reg[2]      | OTTER_MCU/Memory/ioBuffer[15]_i_1_n_0    |                9 |             16 |         1.78 |
-|  CLK_IBUF_BUFG              |                                            | SSG_DISP/CathMod/clear                   |                5 |             20 |         4.00 |
-|  clk_50_BUFG                | OTTER_MCU/Memory/p_1_in[0]                 | OTTER_MCU/CU_FSM/FSM_onehot_PS_reg[0]_0  |               14 |             29 |         2.07 |
-|  clk_50_BUFG                |                                            | Debouncer1/clock_div_counter[0]_i_1_n_0  |                8 |             32 |         4.00 |
-|  clk_50_BUFG                | OTTER_MCU/Memory/E[0]                      | OTTER_MCU/CU_FSM/Q[0]                    |               19 |             32 |         1.68 |
-|  clk_50_BUFG                | OTTER_MCU/Memory/FSM_onehot_PS_reg[2]_1[0] | OTTER_MCU/CU_FSM/Q[0]                    |               14 |             32 |         2.29 |
-|  clk_50_BUFG                | OTTER_MCU/Memory/FSM_onehot_PS_reg[4]_1[0] | OTTER_MCU/CU_FSM/Q[0]                    |               11 |             32 |         2.91 |
-|  clk_50_BUFG                | RAM_reg_r1_0_31_0_5_i_126_n_0              |                                          |               19 |             32 |         1.68 |
-|  clk_50_BUFG                | OTTER_MCU/CU_FSM/RF_WE                     |                                          |               11 |             88 |         8.00 |
-+-----------------------------+--------------------------------------------+------------------------------------------+------------------+----------------+--------------+
++--------------------------------+--------------------------------------------+-----------------------------------------+------------------+----------------+--------------+
+|          Clock Signal          |                Enable Signal               |             Set/Reset Signal            | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------------+--------------------------------------------+-----------------------------------------+------------------+----------------+--------------+
+|  Debouncer1/clk_800z           |                                            |                                         |                1 |              2 |         2.00 |
+|  CLK_IBUF_BUFG                 |                                            | I2C/counterSCL[8]_i_1_n_0               |                1 |              4 |         4.00 |
+|  clk_50_BUFG                   | OTTER_MCU/CU_FSM/Q[1]                      |                                         |                2 |              4 |         2.00 |
+|  FSM_onehot_PS_reg[80]_i_2_n_0 | I2C/holdCount_1                            | I2C/holdCount[7]_i_1_n_0                |                2 |              5 |         2.50 |
+|  clk_50_BUFG                   |                                            | BTNC_IBUF                               |                1 |              5 |         5.00 |
+|  clk_50_BUFG                   | OTTER_MCU/Memory/I2CAddr[6]_i_4_0[0]       |                                         |                3 |              7 |         2.33 |
+|  FSM_onehot_PS_reg[80]_i_2_n_0 |                                            |                                         |                1 |              8 |         8.00 |
+|  clk_50_BUFG                   | OTTER_MCU/Memory/I2CAddr[6]_i_3_0[0]       |                                         |                2 |              8 |         4.00 |
+|  clk_50_BUFG                   | OTTER_MCU/Memory/LEDS[15]_i_4_0[0]         |                                         |                3 |              8 |         2.67 |
+|  clk_50_BUFG                   | OTTER_MCU/Memory/I2CregAddrR[7]_i_2_0[0]   |                                         |                2 |              8 |         4.00 |
+|  clk_50_BUFG                   | OTTER_MCU/Memory/outReg[7]_i_3_1[0]        |                                         |                2 |              8 |         4.00 |
+|  CLK_IBUF_BUFG                 |                                            | I2C/sclClk                              |                2 |              9 |         4.50 |
+|  FSM_onehot_PS_reg[80]_i_2_n_0 | I2C/holdCount_1                            |                                         |                4 |             11 |         2.75 |
+|  CLK_IBUF_BUFG                 |                                            |                                         |                8 |             11 |         1.38 |
+|  clk_50_BUFG                   |                                            |                                         |                7 |             12 |         1.71 |
+|  SSG_DISP/CathMod/s_clk_500    |                                            |                                         |                9 |             13 |         1.44 |
+|  clk_50_BUFG                   | OTTER_MCU/Memory/FSM_onehot_PS_reg[2]_1    | OTTER_MCU/Memory/ioBuffer[15]_i_1_n_0   |                7 |             16 |         2.29 |
+|  clk_50_BUFG                   | OTTER_MCU/Memory/LEDS[15]_i_4_1[0]         |                                         |               10 |             16 |         1.60 |
+|  clk_50_BUFG                   | OTTER_MCU/Memory/outReg[7]_i_3_0[0]        |                                         |                8 |             16 |         2.00 |
+|  CLK_IBUF_BUFG                 |                                            | SSG_DISP/CathMod/clear                  |                5 |             20 |         4.00 |
+|  clk_50_BUFG                   | OTTER_MCU/Memory/p_1_in[0]                 | OTTER_MCU/CU_FSM/FSM_onehot_PS_reg[0]_0 |               14 |             29 |         2.07 |
+|  clk_50_BUFG                   |                                            | Debouncer1/clock_div_counter[0]_i_1_n_0 |                8 |             32 |         4.00 |
+|  clk_50_BUFG                   | RAM_reg_r1_0_31_0_5_i_126_n_0              |                                         |               21 |             32 |         1.52 |
+|  clk_50_BUFG                   | OTTER_MCU/Memory/FSM_onehot_PS_reg[2][0]   | OTTER_MCU/CU_FSM/Q[0]                   |               19 |             32 |         1.68 |
+|  clk_50_BUFG                   | OTTER_MCU/Memory/FSM_onehot_PS_reg[4]_2[0] | OTTER_MCU/CU_FSM/Q[0]                   |               15 |             32 |         2.13 |
+|  clk_50_BUFG                   | OTTER_MCU/Memory/E[0]                      | OTTER_MCU/CU_FSM/Q[0]                   |               22 |             32 |         1.45 |
+|  FSM_onehot_PS_reg[80]_i_2_n_0 | I2C/FSM_onehot_PS[80]_i_1_n_0              |                                         |               13 |             81 |         6.23 |
+|  clk_50_BUFG                   | OTTER_MCU/CU_FSM/RF_WE                     |                                         |               11 |             88 |         8.00 |
++--------------------------------+--------------------------------------------+-----------------------------------------+------------------+----------------+--------------+
 
 

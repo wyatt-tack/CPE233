@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35ticpg236-1L" LaunchTime="1709921810" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/OTTER_MCU.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a35ticpg236-1L" LaunchTime="1710527518" LaunchIncrCheckpoint="$PPRDIR/../../OTTER_MCU/OTTER_MCU.srcs/utils_1/imports/synth_1/OTTER_MCU.dcp">
   <File Type="PA-TCL" Name="OTTER_Wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="OTTER_Wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="OTTER_Wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="OTTER_Wrapper.vds"/>
   <File Type="RDS-UTIL" Name="OTTER_Wrapper_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="OTTER_Wrapper_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="OTTER_Wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="OTTER_Wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="OTTER_Wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/ALU.sv">
@@ -65,6 +68,13 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/Debouncer.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/I2C.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -160,6 +170,14 @@
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
     <Filter Type="Utils"/>
     <File Path="$PSRCDIR/utils_1/imports/synth_1/OTTER_MCU.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../OTTER_MCU/OTTER_MCU.srcs/utils_1/imports/synth_1/OTTER_MCU.dcp">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

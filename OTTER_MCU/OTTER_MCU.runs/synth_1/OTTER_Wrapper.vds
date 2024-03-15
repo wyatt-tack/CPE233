@@ -2,16 +2,15 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Fri Mar  8 10:16:55 2024
-# Process ID: 20064
-# Current directory: C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.runs/synth_1
+# Start of session at: Fri Mar 15 11:32:02 2024
+# Process ID: 25332
+# Current directory: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.runs/synth_1
 # Command line: vivado.exe -log OTTER_Wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source OTTER_Wrapper.tcl
-# Log file: C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.runs/synth_1/OTTER_Wrapper.vds
-# Journal file: C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.runs/synth_1\vivado.jou
+# Log file: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.runs/synth_1/OTTER_Wrapper.vds
+# Journal file: C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.runs/synth_1\vivado.jou
 # Running On: MSI, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 4, Host memory: 8403 MB
 #-----------------------------------------------------------
 source OTTER_Wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1270.926 ; gain = 0.000
 Command: read_checkpoint -auto_incremental -incremental C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/utils_1/imports/synth_1/OTTER_MCU.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/utils_1/imports/synth_1/OTTER_MCU.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -24,69 +23,75 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 3856
+INFO: [Synth 8-7075] Helper process launched with PID 14628
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1270.926 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1326.988 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'OTTER_Wrapper' [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_Wrapper_v1_02.sv:17]
-INFO: [Synth 8-6157] synthesizing module 'OTTER_MCU' [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_MCU.sv:15]
-INFO: [Synth 8-6157] synthesizing module 'Mux_3x8' [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Mux_3x8.sv:13]
-INFO: [Synth 8-226] default block is never used [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Mux_3x8.sv:20]
-INFO: [Synth 8-6155] done synthesizing module 'Mux_3x8' (0#1) [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Mux_3x8.sv:13]
-WARNING: [Synth 8-7071] port 'MUX_6' of module 'Mux_3x8' is unconnected for instance 'Mux_PC' [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_MCU.sv:40]
-WARNING: [Synth 8-7071] port 'MUX_7' of module 'Mux_3x8' is unconnected for instance 'Mux_PC' [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_MCU.sv:40]
-WARNING: [Synth 8-7023] instance 'Mux_PC' of module 'Mux_3x8' has 10 connections declared, but only 8 given [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_MCU.sv:40]
-INFO: [Synth 8-6157] synthesizing module 'PC' [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/PC.sv:15]
-INFO: [Synth 8-6155] done synthesizing module 'PC' (0#1) [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/PC.sv:15]
-INFO: [Synth 8-6157] synthesizing module 'Memory' [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/otter_memory_v1_07.sv:48]
-INFO: [Synth 8-3876] $readmem data file 'otter_memory.mem' is read successfully [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/otter_memory_v1_07.sv:73]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/otter_memory_v1_07.sv:95]
-INFO: [Synth 8-6155] done synthesizing module 'Memory' (0#1) [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/otter_memory_v1_07.sv:48]
-INFO: [Synth 8-6157] synthesizing module 'Mux_2x4' [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Mux_2x4.sv:13]
-INFO: [Synth 8-226] default block is never used [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Mux_2x4.sv:20]
-INFO: [Synth 8-6155] done synthesizing module 'Mux_2x4' (0#1) [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Mux_2x4.sv:13]
-INFO: [Synth 8-6157] synthesizing module 'RegFile' [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/RegFile.sv:15]
-INFO: [Synth 8-6155] done synthesizing module 'RegFile' (0#1) [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/RegFile.sv:15]
-INFO: [Synth 8-6157] synthesizing module 'IMMED_GEN' [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/IMMED_GEN.sv:14]
-INFO: [Synth 8-6155] done synthesizing module 'IMMED_GEN' (0#1) [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/IMMED_GEN.sv:14]
-INFO: [Synth 8-6157] synthesizing module 'Branch_Add_Gen' [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Branch_Add_Gen.sv:14]
-INFO: [Synth 8-6155] done synthesizing module 'Branch_Add_Gen' (0#1) [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Branch_Add_Gen.sv:14]
-WARNING: [Synth 8-7071] port 'MUX_3' of module 'Mux_2x4' is unconnected for instance 'Mux_ALU_A' [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_MCU.sv:50]
-WARNING: [Synth 8-7023] instance 'Mux_ALU_A' of module 'Mux_2x4' has 6 connections declared, but only 5 given [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_MCU.sv:50]
-WARNING: [Synth 8-7071] port 'MUX_5' of module 'Mux_3x8' is unconnected for instance 'Mux_ALU_B' [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_MCU.sv:51]
-WARNING: [Synth 8-7071] port 'MUX_6' of module 'Mux_3x8' is unconnected for instance 'Mux_ALU_B' [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_MCU.sv:51]
-WARNING: [Synth 8-7071] port 'MUX_7' of module 'Mux_3x8' is unconnected for instance 'Mux_ALU_B' [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_MCU.sv:51]
-WARNING: [Synth 8-7023] instance 'Mux_ALU_B' of module 'Mux_3x8' has 10 connections declared, but only 7 given [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_MCU.sv:51]
-INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/ALU.sv:15]
-INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/ALU.sv:15]
-INFO: [Synth 8-6157] synthesizing module 'Branch_Cond_Gen' [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Branch_Cond_Gen.sv:15]
-INFO: [Synth 8-6155] done synthesizing module 'Branch_Cond_Gen' (0#1) [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Branch_Cond_Gen.sv:15]
-INFO: [Synth 8-6157] synthesizing module 'CU_DCDR' [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CU_DCDR.sv:15]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CU_DCDR.sv:117]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CU_DCDR.sv:31]
-INFO: [Synth 8-6155] done synthesizing module 'CU_DCDR' (0#1) [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CU_DCDR.sv:15]
-INFO: [Synth 8-6157] synthesizing module 'CU_FSM' [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CU_FSM.sv:16]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CU_FSM.sv:49]
-INFO: [Synth 8-6155] done synthesizing module 'CU_FSM' (0#1) [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CU_FSM.sv:16]
-INFO: [Synth 8-6157] synthesizing module 'CSR' [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CSR.sv:14]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CSR.sv:26]
-INFO: [Synth 8-6155] done synthesizing module 'CSR' (0#1) [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CSR.sv:14]
-INFO: [Synth 8-6155] done synthesizing module 'OTTER_MCU' (0#1) [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_MCU.sv:15]
-INFO: [Synth 8-6157] synthesizing module 'SevSegDisp' [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/SevSegDisp.sv:21]
-INFO: [Synth 8-6157] synthesizing module 'BCD' [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/BCD.sv:18]
-INFO: [Synth 8-6155] done synthesizing module 'BCD' (0#1) [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/BCD.sv:18]
-INFO: [Synth 8-6157] synthesizing module 'CathodeDriver' [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CathodeDriver.sv:22]
-INFO: [Synth 8-226] default block is never used [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CathodeDriver.sv:46]
-INFO: [Synth 8-226] default block is never used [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CathodeDriver.sv:49]
-INFO: [Synth 8-226] default block is never used [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CathodeDriver.sv:71]
-INFO: [Synth 8-226] default block is never used [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CathodeDriver.sv:93]
-INFO: [Synth 8-226] default block is never used [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CathodeDriver.sv:115]
-INFO: [Synth 8-6155] done synthesizing module 'CathodeDriver' (0#1) [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CathodeDriver.sv:22]
-INFO: [Synth 8-6155] done synthesizing module 'SevSegDisp' (0#1) [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/SevSegDisp.sv:21]
-INFO: [Synth 8-6157] synthesizing module 'Debouncer' [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Debouncer.sv:27]
-INFO: [Synth 8-6155] done synthesizing module 'Debouncer' (0#1) [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Debouncer.sv:27]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_Wrapper_v1_02.sv:81]
-INFO: [Synth 8-6155] done synthesizing module 'OTTER_Wrapper' (0#1) [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_Wrapper_v1_02.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'OTTER_Wrapper' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_Wrapper_v1_02.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'OTTER_MCU' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_MCU.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'Mux_3x8' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Mux_3x8.sv:13]
+INFO: [Synth 8-226] default block is never used [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Mux_3x8.sv:20]
+INFO: [Synth 8-6155] done synthesizing module 'Mux_3x8' (0#1) [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Mux_3x8.sv:13]
+WARNING: [Synth 8-7071] port 'MUX_6' of module 'Mux_3x8' is unconnected for instance 'Mux_PC' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_MCU.sv:40]
+WARNING: [Synth 8-7071] port 'MUX_7' of module 'Mux_3x8' is unconnected for instance 'Mux_PC' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_MCU.sv:40]
+WARNING: [Synth 8-7023] instance 'Mux_PC' of module 'Mux_3x8' has 10 connections declared, but only 8 given [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_MCU.sv:40]
+INFO: [Synth 8-6157] synthesizing module 'PC' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/PC.sv:15]
+INFO: [Synth 8-6155] done synthesizing module 'PC' (0#1) [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/PC.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'Memory' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/otter_memory_v1_07.sv:48]
+INFO: [Synth 8-3876] $readmem data file 'otter_memory.mem' is read successfully [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/otter_memory_v1_07.sv:73]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/otter_memory_v1_07.sv:95]
+INFO: [Synth 8-6155] done synthesizing module 'Memory' (0#1) [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/otter_memory_v1_07.sv:48]
+INFO: [Synth 8-6157] synthesizing module 'Mux_2x4' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Mux_2x4.sv:13]
+INFO: [Synth 8-226] default block is never used [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Mux_2x4.sv:20]
+INFO: [Synth 8-6155] done synthesizing module 'Mux_2x4' (0#1) [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Mux_2x4.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'RegFile' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/RegFile.sv:15]
+INFO: [Synth 8-6155] done synthesizing module 'RegFile' (0#1) [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/RegFile.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'IMMED_GEN' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/IMMED_GEN.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'IMMED_GEN' (0#1) [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/IMMED_GEN.sv:14]
+INFO: [Synth 8-6157] synthesizing module 'Branch_Add_Gen' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Branch_Add_Gen.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'Branch_Add_Gen' (0#1) [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Branch_Add_Gen.sv:14]
+WARNING: [Synth 8-7071] port 'MUX_3' of module 'Mux_2x4' is unconnected for instance 'Mux_ALU_A' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_MCU.sv:50]
+WARNING: [Synth 8-7023] instance 'Mux_ALU_A' of module 'Mux_2x4' has 6 connections declared, but only 5 given [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_MCU.sv:50]
+WARNING: [Synth 8-7071] port 'MUX_5' of module 'Mux_3x8' is unconnected for instance 'Mux_ALU_B' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_MCU.sv:51]
+WARNING: [Synth 8-7071] port 'MUX_6' of module 'Mux_3x8' is unconnected for instance 'Mux_ALU_B' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_MCU.sv:51]
+WARNING: [Synth 8-7071] port 'MUX_7' of module 'Mux_3x8' is unconnected for instance 'Mux_ALU_B' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_MCU.sv:51]
+WARNING: [Synth 8-7023] instance 'Mux_ALU_B' of module 'Mux_3x8' has 10 connections declared, but only 7 given [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_MCU.sv:51]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/ALU.sv:15]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/ALU.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'Branch_Cond_Gen' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Branch_Cond_Gen.sv:15]
+INFO: [Synth 8-6155] done synthesizing module 'Branch_Cond_Gen' (0#1) [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Branch_Cond_Gen.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'CU_DCDR' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CU_DCDR.sv:15]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CU_DCDR.sv:117]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CU_DCDR.sv:31]
+INFO: [Synth 8-6155] done synthesizing module 'CU_DCDR' (0#1) [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CU_DCDR.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'CU_FSM' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CU_FSM.sv:16]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CU_FSM.sv:49]
+INFO: [Synth 8-6155] done synthesizing module 'CU_FSM' (0#1) [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CU_FSM.sv:16]
+INFO: [Synth 8-6157] synthesizing module 'CSR' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CSR.sv:14]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CSR.sv:26]
+INFO: [Synth 8-6155] done synthesizing module 'CSR' (0#1) [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CSR.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'OTTER_MCU' (0#1) [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_MCU.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'SevSegDisp' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/SevSegDisp.sv:21]
+INFO: [Synth 8-6157] synthesizing module 'BCD' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/BCD.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'BCD' (0#1) [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/BCD.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'CathodeDriver' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CathodeDriver.sv:22]
+INFO: [Synth 8-226] default block is never used [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CathodeDriver.sv:46]
+INFO: [Synth 8-226] default block is never used [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CathodeDriver.sv:49]
+INFO: [Synth 8-226] default block is never used [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CathodeDriver.sv:71]
+INFO: [Synth 8-226] default block is never used [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CathodeDriver.sv:93]
+INFO: [Synth 8-226] default block is never used [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CathodeDriver.sv:115]
+INFO: [Synth 8-6155] done synthesizing module 'CathodeDriver' (0#1) [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/CathodeDriver.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'SevSegDisp' (0#1) [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/SevSegDisp.sv:21]
+INFO: [Synth 8-6157] synthesizing module 'Debouncer' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Debouncer.sv:27]
+INFO: [Synth 8-6155] done synthesizing module 'Debouncer' (0#1) [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/Debouncer.sv:27]
+INFO: [Synth 8-6157] synthesizing module 'I2C' [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/I2C.sv:19]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/I2C.sv:118]
+INFO: [Synth 8-6155] done synthesizing module 'I2C' (0#1) [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/I2C.sv:19]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_Wrapper_v1_02.sv:107]
+INFO: [Synth 8-6155] done synthesizing module 'OTTER_Wrapper' (0#1) [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_Wrapper_v1_02.sv:17]
+WARNING: [Synth 8-3917] design OTTER_Wrapper has port GND1 driven by constant 0
+WARNING: [Synth 8-3917] design OTTER_Wrapper has port GND2 driven by constant 0
+WARNING: [Synth 8-7129] Port I2CAddr[7] in module I2C is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ir[19] in module CSR is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ir[18] in module CSR is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ir[17] in module CSR is either unconnected or has no load
@@ -158,52 +163,53 @@ WARNING: [Synth 8-7129] Port Instruction[2] in module IMMED_GEN is either unconn
 WARNING: [Synth 8-7129] Port Instruction[1] in module IMMED_GEN is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Instruction[0] in module IMMED_GEN is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 1270.926 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1326.988 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 1270.926 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1326.988 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 1270.926 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1326.988 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1270.926 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1326.988 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/Basys3_constraints.xdc]
-Finished Parsing XDC File [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/Basys3_constraints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/Basys3_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/OTTER_Wrapper_propImpl.xdc].
+Parsing XDC File [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/Basys3_constraints.xdc]
+Finished Parsing XDC File [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/Basys3_constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/Basys3_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/OTTER_Wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/OTTER_Wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1327.652 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1329.586 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.223 . Memory (MB): peak = 1327.652 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1329.586 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:36 . Memory (MB): peak = 1327.652 ; gain = 56.727
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 1329.586 ; gain = 2.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35ticpg236-1L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:36 . Memory (MB): peak = 1327.652 ; gain = 56.727
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 1329.586 ; gain = 2.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:37 . Memory (MB): peak = 1327.652 ; gain = 56.727
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 1329.586 ; gain = 2.598
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'PS_reg' in module 'CU_FSM'
+INFO: [Synth 8-802] inferred FSM for state register 'PS_reg' in module 'I2C'
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
@@ -230,8 +236,94 @@ INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of 
                  ST_INTR |                            10000 | 00000000000000000000000000000100
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'PS_reg' using encoding 'one-hot' in module 'CU_FSM'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   holdW | 000000000000000000000000000000000000000000000000000000000000000000000000000000001 | 00000000000000000000000000000000
+           startAddrSelW | 000000000000000000000000000000000000000000000000000000000000000000000000000000010 | 00000000000000000000000000000001
+                 addrWW6 | 000000000000000000000000000000000000000000000000000000000000000000000000000000100 | 00000000000000000000000000000010
+                 addrWW5 | 000000000000000000000000000000000000000000000000000000000000000000000000000001000 | 00000000000000000000000000000011
+                 addrWW4 | 000000000000000000000000000000000000000000000000000000000000000000000000000010000 | 00000000000000000000000000000100
+                 addrWW3 | 000000000000000000000000000000000000000000000000000000000000000000000000000100000 | 00000000000000000000000000000101
+                 addrWW2 | 000000000000000000000000000000000000000000000000000000000000000000000000001000000 | 00000000000000000000000000000110
+                 addrWW1 | 000000000000000000000000000000000000000000000000000000000000000000000000010000000 | 00000000000000000000000000000111
+                 addrWW0 | 000000000000000000000000000000000000000000000000000000000000000000000000100000000 | 00000000000000000000000000001000
+                  addrWW | 000000000000000000000000000000000000000000000000000000000000000000000001000000000 | 00000000000000000000000000001001
+            ackAddrSelW1 | 000000000000000000000000000000000000000000000000000000000000000000000010000000000 | 00000000000000000000000000001010
+            ackAddrSelW2 | 000000000000000000000000000000000000000000000000000000000000000000000100000000000 | 00000000000000000000000000001011
+               regAddr7W | 000000000000000000000000000000000000000000000000000000000000000000001000000000000 | 00000000000000000000000000001100
+               regAddr6W | 000000000000000000000000000000000000000000000000000000000000000000010000000000000 | 00000000000000000000000000001101
+               regAddr5W | 000000000000000000000000000000000000000000000000000000000000000000100000000000000 | 00000000000000000000000000001110
+               regAddr4W | 000000000000000000000000000000000000000000000000000000000000000001000000000000000 | 00000000000000000000000000001111
+               regAddr3W | 000000000000000000000000000000000000000000000000000000000000000010000000000000000 | 00000000000000000000000000010000
+               regAddr2W | 000000000000000000000000000000000000000000000000000000000000000100000000000000000 | 00000000000000000000000000010001
+               regAddr1W | 000000000000000000000000000000000000000000000000000000000000001000000000000000000 | 00000000000000000000000000010010
+               regAddr0W | 000000000000000000000000000000000000000000000000000000000000010000000000000000000 | 00000000000000000000000000010011
+             ackRegSelW1 | 000000000000000000000000000000000000000000000000000000000000100000000000000000000 | 00000000000000000000000000010100
+             ackRegSelW2 | 000000000000000000000000000000000000000000000000000000000001000000000000000000000 | 00000000000000000000000000010101
+                  dataW7 | 000000000000000000000000000000000000000000000000000000000010000000000000000000000 | 00000000000000000000000000010110
+                  dataW6 | 000000000000000000000000000000000000000000000000000000000100000000000000000000000 | 00000000000000000000000000010111
+                  dataW5 | 000000000000000000000000000000000000000000000000000000001000000000000000000000000 | 00000000000000000000000000011000
+                  dataW4 | 000000000000000000000000000000000000000000000000000000010000000000000000000000000 | 00000000000000000000000000011001
+                  dataW3 | 000000000000000000000000000000000000000000000000000000100000000000000000000000000 | 00000000000000000000000000011010
+                  dataW2 | 000000000000000000000000000000000000000000000000000001000000000000000000000000000 | 00000000000000000000000000011011
+                  dataW1 | 000000000000000000000000000000000000000000000000000010000000000000000000000000000 | 00000000000000000000000000011100
+                  dataW0 | 000000000000000000000000000000000000000000000000000100000000000000000000000000000 | 00000000000000000000000000011101
+                   ackW1 | 000000000000000000000000000000000000000000000000001000000000000000000000000000000 | 00000000000000000000000000011110
+                   ackW2 | 000000000000000000000000000000000000000000000000010000000000000000000000000000000 | 00000000000000000000000000011111
+                   stopW | 000000000000000000000000000000000000000000000000100000000000000000000000000000000 | 00000000000000000000000000100000
+                  holdR1 | 000000000000000000000000000000000000000000000001000000000000000000000000000000000 | 00000000000000000000000000100001
+                  holdR2 | 000000000000000000000000000000000000000000000010000000000000000000000000000000000 | 00000000000000000000000000100010
+           startAddrSelR | 000000000000000000000000000000000000000000000100000000000000000000000000000000000 | 00000000000000000000000000100011
+                 addrRW6 | 000000000000000000000000000000000000000000001000000000000000000000000000000000000 | 00000000000000000000000000100100
+                 addrRW5 | 000000000000000000000000000000000000000000010000000000000000000000000000000000000 | 00000000000000000000000000100101
+                 addrRW4 | 000000000000000000000000000000000000000000100000000000000000000000000000000000000 | 00000000000000000000000000100110
+                 addrRW3 | 000000000000000000000000000000000000000001000000000000000000000000000000000000000 | 00000000000000000000000000100111
+                 addrRW2 | 000000000000000000000000000000000000000010000000000000000000000000000000000000000 | 00000000000000000000000000101000
+                 addrRW1 | 000000000000000000000000000000000000000100000000000000000000000000000000000000000 | 00000000000000000000000000101001
+                 addrRW0 | 000000000000000000000000000000000000001000000000000000000000000000000000000000000 | 00000000000000000000000000101010
+                  addrRW | 000000000000000000000000000000000000010000000000000000000000000000000000000000000 | 00000000000000000000000000101011
+            ackAddrSelR1 | 000000000000000000000000000000000000100000000000000000000000000000000000000000000 | 00000000000000000000000000101100
+            ackAddrSelR2 | 000000000000000000000000000000000001000000000000000000000000000000000000000000000 | 00000000000000000000000000101101
+               regAddr7R | 000000000000000000000000000000000010000000000000000000000000000000000000000000000 | 00000000000000000000000000101110
+               regAddr6R | 000000000000000000000000000000000100000000000000000000000000000000000000000000000 | 00000000000000000000000000101111
+               regAddr5R | 000000000000000000000000000000001000000000000000000000000000000000000000000000000 | 00000000000000000000000000110000
+               regAddr4R | 000000000000000000000000000000010000000000000000000000000000000000000000000000000 | 00000000000000000000000000110001
+               regAddr3R | 000000000000000000000000000000100000000000000000000000000000000000000000000000000 | 00000000000000000000000000110010
+               regAddr2R | 000000000000000000000000000001000000000000000000000000000000000000000000000000000 | 00000000000000000000000000110011
+               regAddr1R | 000000000000000000000000000010000000000000000000000000000000000000000000000000000 | 00000000000000000000000000110100
+               regAddr0R | 000000000000000000000000000100000000000000000000000000000000000000000000000000000 | 00000000000000000000000000110101
+             ackRegSelR1 | 000000000000000000000000001000000000000000000000000000000000000000000000000000000 | 00000000000000000000000000110110
+             ackRegSelR2 | 000000000000000000000000010000000000000000000000000000000000000000000000000000000 | 00000000000000000000000000110111
+             stopRegSelR | 000000000000000000000000100000000000000000000000000000000000000000000000000000000 | 00000000000000000000000000111000
+           holdDataRead1 | 000000000000000000000001000000000000000000000000000000000000000000000000000000000 | 00000000000000000000000000111001
+           holdDataRead2 | 000000000000000000000010000000000000000000000000000000000000000000000000000000000 | 00000000000000000000000000111010
+           startDataRead | 000000000000000000000100000000000000000000000000000000000000000000000000000000000 | 00000000000000000000000000111011
+                  addrR6 | 000000000000000000001000000000000000000000000000000000000000000000000000000000000 | 00000000000000000000000000111100
+                  addrR5 | 000000000000000000010000000000000000000000000000000000000000000000000000000000000 | 00000000000000000000000000111101
+                  addrR4 | 000000000000000000100000000000000000000000000000000000000000000000000000000000000 | 00000000000000000000000000111110
+                  addrR3 | 000000000000000001000000000000000000000000000000000000000000000000000000000000000 | 00000000000000000000000000111111
+                  addrR2 | 000000000000000010000000000000000000000000000000000000000000000000000000000000000 | 00000000000000000000000001000000
+                  addrR1 | 000000000000000100000000000000000000000000000000000000000000000000000000000000000 | 00000000000000000000000001000001
+                  addrR0 | 000000000000001000000000000000000000000000000000000000000000000000000000000000000 | 00000000000000000000000001000010
+                   addrR | 000000000000010000000000000000000000000000000000000000000000000000000000000000000 | 00000000000000000000000001000011
+           ackDataSendR1 | 000000000000100000000000000000000000000000000000000000000000000000000000000000000 | 00000000000000000000000001000100
+           ackDataSendR2 | 000000000001000000000000000000000000000000000000000000000000000000000000000000000 | 00000000000000000000000001000101
+                  dataR7 | 000000000010000000000000000000000000000000000000000000000000000000000000000000000 | 00000000000000000000000001000110
+                  dataR6 | 000000000100000000000000000000000000000000000000000000000000000000000000000000000 | 00000000000000000000000001000111
+                  dataR5 | 000000001000000000000000000000000000000000000000000000000000000000000000000000000 | 00000000000000000000000001001000
+                  dataR4 | 000000010000000000000000000000000000000000000000000000000000000000000000000000000 | 00000000000000000000000001001001
+                  dataR3 | 000000100000000000000000000000000000000000000000000000000000000000000000000000000 | 00000000000000000000000001001010
+                  dataR2 | 000001000000000000000000000000000000000000000000000000000000000000000000000000000 | 00000000000000000000000001001011
+                  dataR1 | 000010000000000000000000000000000000000000000000000000000000000000000000000000000 | 00000000000000000000000001001100
+                  dataR0 | 000100000000000000000000000000000000000000000000000000000000000000000000000000000 | 00000000000000000000000001001101
+                  nackR1 | 001000000000000000000000000000000000000000000000000000000000000000000000000000000 | 00000000000000000000000001001110
+                  nackR2 | 010000000000000000000000000000000000000000000000000000000000000000000000000000000 | 00000000000000000000000001001111
+                   stopR | 100000000000000000000000000000000000000000000000000000000000000000000000000000000 | 00000000000000000000000001010000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'PS_reg' using encoding 'one-hot' in module 'I2C'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:38 . Memory (MB): peak = 1327.652 ; gain = 56.727
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 1329.586 ; gain = 2.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -241,6 +333,8 @@ Detailed RTL Component Info :
 	   2 Input   32 Bit       Adders := 5     
 	   3 Input   32 Bit       Adders := 1     
 	   2 Input   20 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 1     
 	   2 Input    4 Bit       Adders := 34    
 	   2 Input    3 Bit       Adders := 7     
 	   2 Input    2 Bit       Adders := 1     
@@ -250,11 +344,12 @@ Detailed RTL Component Info :
 +---Registers : 
 	               32 Bit    Registers := 7     
 	               16 Bit    Registers := 2     
-	                8 Bit    Registers := 1     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 9     
 	                5 Bit    Registers := 1     
 	                4 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 5     
+	                1 Bit    Registers := 9     
 +---RAMs : 
 	             512K Bit	(16384 X 32 bit)          RAMs := 1     
 +---Muxes : 
@@ -262,8 +357,10 @@ Detailed RTL Component Info :
 	  16 Input   32 Bit        Muxes := 1     
 	   2 Input   32 Bit        Muxes := 11    
 	   4 Input   32 Bit        Muxes := 4     
-	   2 Input   16 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 2     
 	  19 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
 	   5 Input    5 Bit        Muxes := 1     
 	   2 Input    5 Bit        Muxes := 3     
 	   2 Input    4 Bit        Muxes := 32    
@@ -276,11 +373,12 @@ Detailed RTL Component Info :
 	   4 Input    2 Bit        Muxes := 1     
 	  11 Input    2 Bit        Muxes := 2     
 	   9 Input    1 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 9     
+	   2 Input    1 Bit        Muxes := 19    
 	  11 Input    1 Bit        Muxes := 6     
 	   5 Input    1 Bit        Muxes := 6     
 	   4 Input    1 Bit        Muxes := 2     
-	   3 Input    1 Bit        Muxes := 2     
+	  81 Input    1 Bit        Muxes := 4     
+	   8 Input    1 Bit        Muxes := 7     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -297,6 +395,9 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3936] Found unconnected internal register 'I2CAddr_reg' and it is trimmed from '8' to '7' bits. [C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.srcs/sources_1/new/OTTER_Wrapper_v1_02.sv:80]
+WARNING: [Synth 8-3917] design OTTER_Wrapper has port GND1 driven by constant 0
+WARNING: [Synth 8-3917] design OTTER_Wrapper has port GND2 driven by constant 0
 WARNING: [Synth 8-7129] Port ir[19] in module CSR is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ir[18] in module CSR is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ir[17] in module CSR is either unconnected or has no load
@@ -326,7 +427,6 @@ WARNING: [Synth 8-7129] Port ir[26] in module CU_FSM is either unconnected or ha
 WARNING: [Synth 8-7129] Port ir[25] in module CU_FSM is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ir[24] in module CU_FSM is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ir[23] in module CU_FSM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ir[22] in module CU_FSM is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/Memory/memory_reg"
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/Memory/memory_reg"
@@ -345,7 +445,7 @@ INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of 
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/Memory/memory_reg"
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/Memory/memory_reg"
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:01:04 . Memory (MB): peak = 1327.652 ; gain = 56.727
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:57 . Memory (MB): peak = 1329.586 ; gain = 2.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -375,13 +475,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:01:11 . Memory (MB): peak = 1327.652 ; gain = 56.727
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:01:03 . Memory (MB): peak = 1329.586 ; gain = 2.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:01:11 . Memory (MB): peak = 1327.652 ; gain = 56.727
+Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:01:03 . Memory (MB): peak = 1329.586 ; gain = 2.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -441,7 +541,7 @@ INFO: [Synth 8-7052] The timing for the instance OTTER_MCU/Memory/memory_reg_bra
 INFO: [Synth 8-7052] The timing for the instance OTTER_MCU/Memory/memory_reg_bram_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance OTTER_MCU/Memory/memory_reg_bram_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:01:12 . Memory (MB): peak = 1344.031 ; gain = 73.105
+Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:01:05 . Memory (MB): peak = 1400.355 ; gain = 73.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -459,37 +559,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:01:18 . Memory (MB): peak = 1358.809 ; gain = 87.883
+Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:01:10 . Memory (MB): peak = 1415.180 ; gain = 88.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:01:18 . Memory (MB): peak = 1358.809 ; gain = 87.883
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:01:10 . Memory (MB): peak = 1415.180 ; gain = 88.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:01:18 . Memory (MB): peak = 1358.809 ; gain = 87.883
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:01:10 . Memory (MB): peak = 1415.180 ; gain = 88.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:01:18 . Memory (MB): peak = 1358.809 ; gain = 87.883
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:01:10 . Memory (MB): peak = 1415.180 ; gain = 88.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:01:18 . Memory (MB): peak = 1358.883 ; gain = 87.957
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:55 ; elapsed = 00:01:10 . Memory (MB): peak = 1415.387 ; gain = 88.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:01:18 . Memory (MB): peak = 1358.883 ; gain = 87.957
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:55 ; elapsed = 00:01:10 . Memory (MB): peak = 1415.387 ; gain = 88.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -519,48 +619,50 @@ Report Cell Usage:
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |BUFG     |     2|
+|1     |BUFG     |     3|
 |2     |CARRY4   |    85|
-|3     |LUT1     |    52|
-|4     |LUT2     |   215|
-|5     |LUT3     |   223|
-|6     |LUT4     |   260|
-|7     |LUT5     |   253|
-|8     |LUT6     |   882|
-|9     |MUXF7    |   124|
+|3     |LUT1     |    46|
+|4     |LUT2     |   218|
+|5     |LUT3     |   215|
+|6     |LUT4     |   245|
+|7     |LUT5     |   302|
+|8     |LUT6     |  1079|
+|9     |MUXF7    |   112|
 |10    |MUXF8    |    55|
 |11    |RAM32M   |    10|
 |12    |RAM32X1D |     4|
 |13    |RAMB36E1 |    16|
 |15    |SRL16E   |     1|
-|16    |FDRE     |   289|
-|17    |FDSE     |     5|
+|16    |FDRE     |   459|
+|17    |FDSE     |     1|
 |18    |IBUF     |    19|
-|19    |OBUF     |    28|
+|19    |IOBUF    |     1|
+|20    |OBUF     |    39|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:01:18 . Memory (MB): peak = 1358.883 ; gain = 87.957
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:55 ; elapsed = 00:01:10 . Memory (MB): peak = 1415.387 ; gain = 88.398
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 64 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:01:04 . Memory (MB): peak = 1358.883 ; gain = 31.230
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:01:18 . Memory (MB): peak = 1358.883 ; gain = 87.957
+Synthesis finished with 0 errors, 0 critical warnings and 67 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:48 ; elapsed = 00:01:07 . Memory (MB): peak = 1415.387 ; gain = 85.801
+Synthesis Optimization Complete : Time (s): cpu = 00:00:55 ; elapsed = 00:01:10 . Memory (MB): peak = 1415.387 ; gain = 88.398
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1371.426 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 294 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 1429.816 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 283 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1379.570 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1432.707 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 14 instances were transformed.
+  A total of 15 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 10 instances
   RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
 
-Synth Design complete, checksum: c2a3d04d
+Synth Design complete, checksum: bfbee86
 INFO: [Common 17-83] Releasing license: Synthesis
-138 Infos, 110 Warnings, 0 Critical Warnings and 0 Errors encountered.
+143 Infos, 115 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:01:36 . Memory (MB): peak = 1379.570 ; gain = 108.645
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Wyatt/Documents/Vivado/OTTER_MCU/OTTER_MCU.runs/synth_1/OTTER_Wrapper.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:16 . Memory (MB): peak = 1432.707 ; gain = 105.719
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Wyatt/Documents/Vivado/CPE233_Final/OTTER_MCU/OTTER_MCU.runs/synth_1/OTTER_Wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file OTTER_Wrapper_utilization_synth.rpt -pb OTTER_Wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Mar  8 10:19:19 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 15 11:33:26 2024...
