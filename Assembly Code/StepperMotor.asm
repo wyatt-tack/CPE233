@@ -16,7 +16,7 @@ SPEED:		.word 0x186A0, 0x15F90, 0x11170, 0xEA60, 0xC350, 0x9c40, 0x7530, 0x4E20,
 
 MAIN:
 	# Check speed of input
-	lw 		t6, 0x120(s0)		# Get Button value rst if 1
+	lw 		t6, 0x120(s0)		# load the value from external source in to t6 
 
     # Output the speed to the SSEG 
     sw      t6, 0x40(s0)        # Output the speed to the SSEG

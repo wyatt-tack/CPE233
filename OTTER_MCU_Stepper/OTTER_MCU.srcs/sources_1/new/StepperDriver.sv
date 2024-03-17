@@ -40,7 +40,8 @@ module StepperDriver(
         if (halt) begin
             // Do Nothing
         end
-        else if (clk_reg >= 100000) begin
+        else if (clk_reg >= accVal) begin
+            // Replace accVal with 1000000 for constant speed testing
             sclk <= ~sclk;
             clk_reg <= 0;
         end
@@ -52,12 +53,14 @@ module StepperDriver(
     typedef enum {pole_1, pole_2, pole_3, pole_4} pole_type;
     pole_type pole, next_pole, reverse_next_pole;
 
+    // Initially set pole states since there is not initial state
     initial begin
         pole = pole_1;
         next_pole = pole_2;
         reverse_next_pole = pole_3;
     end
 
+    // State logic for stepper motor
     always_ff @(posedge sclk) begin
         if (halt) begin
             // Do Nothing
@@ -71,6 +74,7 @@ module StepperDriver(
     end
 
     // Pole state machine
+    // Controls the pole of the stepper motor to trigger steps
     always_comb begin
         case(pole)
             pole_1: begin
